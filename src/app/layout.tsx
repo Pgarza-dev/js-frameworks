@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-bodyColor">
+      <body className="bg-lightModeBody">
         <Header />
         {children}
       </body>
