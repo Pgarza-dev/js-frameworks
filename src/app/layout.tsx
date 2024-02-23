@@ -15,10 +15,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const additionalClasses = "bg-bodyColor"; // Add your additional classes here
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />{children}</body>
+      <body className={`${inter.className} ${additionalClasses}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
