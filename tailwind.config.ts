@@ -11,6 +11,9 @@ const config: Config = {
       backgroundImage: {
         "main-bg": "url('/main1.jpg')",
       },
+      fontFamily: {
+        sans: ['Poppins'],
+      },
       colors: {
         bodyColor: "#fbfaf7",
         bglight: "1010100d",
