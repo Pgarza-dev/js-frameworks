@@ -8,11 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      darkMode: 'selector',
       backgroundImage: {
         "main-bg": "url('/main1.jpg')",
       },
       fontFamily: {
-        sans: ['Poppins'],
+        sans: ["Poppins"],
       },
       colors: {
         bodyColor: "#0b0e0f",
@@ -21,6 +22,11 @@ const config: Config = {
         accent: "#778e6b",
         darkText: "#242424",
         lightText: "#e5eaeb",
+        lightModeText: "#14191a",
+        lightModeBody: "#f0f3f4",
+        lightModePrimary: "#bfb1c4",
+        lightModeSecondary: "#ebe6e5",
+        lightModeAccent: "#7d9471",
       },
     },
   },
