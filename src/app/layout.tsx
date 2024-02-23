@@ -15,7 +15,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const additionalClasses = "bg-bodyColor"; // Add your additional classes here
+  const additionalClasses = ""; // Add your additional classes here
 
   return (
     <html lang="en">
