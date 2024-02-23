@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./css/globals.css";
 import Header from "@/components/header/Header";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,11 +13,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const additionalClasses = ""; // Add your additional classes here
-
   return (
     <html lang="en">
-      <body className={`${inter.className} ${additionalClasses}`}>
+      <body>
         <Header />
         {children}
       </body>
