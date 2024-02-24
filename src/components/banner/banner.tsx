@@ -44,7 +44,7 @@ export default function Banner() {
           <Image
             src={banner1}
             alt="banner1"
-            className="w-full h-full relative max-h-screen"
+            className="w-full h-full relative image-height "
           />
           <BannerText title="Sleek Picks" />
         </div>
@@ -52,7 +52,7 @@ export default function Banner() {
           <Image
             src={banner2}
             alt="banner2"
-            className="w-full h-full relative max-h-screen"
+            className="w-full h-full relative image-height"
           />
           <BannerText title="Sleek Picks" />
         </div>
@@ -60,7 +60,7 @@ export default function Banner() {
           <Image
             src={banner3}
             alt="banner3"
-            className="w-full h-full relative max-h-screen"
+            className="w-full h-full relative image-height"
           />
           <BannerText title="Sleek Picks" />
         </div>
