@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .image-height {
+  height: 30rem;
   object-fit: cover;
-  max-height: 50vh;
-
+  object-position: calc(50% - 1px) calc(2% - 30px);
 }
