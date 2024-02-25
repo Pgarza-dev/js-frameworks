@@ -11,12 +11,12 @@ export default function Header() {
       <Container className="h-full flex items-center md:gap-x-5 justify-between md:justify-start">
         <Logo />
         {/* Search bar */}
-        <div className="group w-full hidden border-2 md:flex items-center gap-x-1 bg-white rounded-full px-4 py-1.5 focus-within:border-lightModePrimary focus-within:bg-white">
+        <div className="group w-full hidden border-2 md:flex items-center gap-x-1 bg-white rounded-full px-4 py-1.5 focus-within:border-lightModePrimary">
           <GoSearch className="text-lightModeText group-focus-within:text-darkText duration-200 " />
           <input
             type="text"
             placeholder="Search for products"
-            className="text-lightModeText placeholder:text-sm placeholder:text-lightModeText flex-1 outline-none bg-white focus:placeholder:text-darkText focus:bg-white"
+            className="text-lightModeText placeholder:text-sm placeholder:text-gray-400 flex-1 outline-none bg-white focus:placeholder:text-darkText focus:bg-white"
           />
         </div>
         {/* Login Button */}
