@@ -15,8 +15,8 @@ export default function Banner() {
     return (
       <div
         onClick={onClick}
-        className="p-3 bg-lightText hover:bg-white hover:text-lightModePrimary hover:font-bold cursor-pointer duration-200 rounded-full text-2xl items-center justify-center z-20 absolute right-5 top-1/2">
-        <PiCaretRightLight />
+        className="p-3 bg-lightText hover:bg-white hover:text-lightModePrimary hover:font-bold cursor-pointer duration-200 rounded-full text-2xl items-center justify-center z-20 absolute left-1/3  bottom-10">
+        <PiCaretLeftLight />
       </div>
     );
   };
@@ -25,8 +25,8 @@ export default function Banner() {
     return (
       <div
         onClick={onClick}
-        className="p-3 bg-lightText hover:bg-white hover:font-bold hover:text-lightModePrimary cursor-pointer duration-200 rounded-full text-2xl items-center justify-center z-20 absolute left-5 top-1/2">
-        <PiCaretLeftLight />
+        className="p-3 bg-lightText hover:bg-white hover:font-bold hover:text-lightModePrimary cursor-pointer duration-200 rounded-full text-2xl items-center justify-center z-20 absolute right-1/3 bottom-10">
+        <PiCaretRightLight />
       </div>
     );
   };
