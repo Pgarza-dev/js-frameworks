@@ -31,7 +31,7 @@ export default function BannerText({
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className="flex gap-x-4 mt-2 z-50">
+          className="flex gap-x-4 mt-2 ">
           <button className="relative py-3 px-6 rounded-full cursor-pointer duration-200 text-white border-[1px] border-lightModePrimary hover:bg-lightModePrimary">
             Find out more
           </button>

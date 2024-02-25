@@ -1,9 +1,10 @@
 "use client"; // The Slider is a third-party library that is not compatible with the server-side rendering. So, we need to use the client-side rendering for this component.
 
 import Slider from "react-slick";
-import bannerOne from "../../images/bannerOne.jpg";
-import bannerTwo from "../../images/bannerTwo.jpg";
-import bannerThree from "../../images/bannerThree.jpg";
+import bannerOne from "@/images/bannerOne.jpg";
+import bannerTwo from "@/images/bannerTwo.jpg";
+import bannerThree from "@/images/bannerThree.jpg";
+
 import {
   PiCaretLeftLight,
   PiCaretRightLight,
@@ -51,27 +52,31 @@ export default function Banner() {
           <Image
             src={bannerOne}
             alt="bannerOne"
-            className="w-full h-full relative image-height "
+            className="w-full h-full relative image-height"
+            priority
           />
           <BannerText title="Street wear" />
         </div>
-        <div>
+        <div className="w-full h-full relative">
           <Image
             src={bannerTwo}
             alt="bannerTwo"
             className="w-full h-full relative image-height"
+            priority
           />
-          <BannerText title="Sleek Picks" />
+          <BannerText title="Street wear" />
         </div>
-        <div>
+        <div className="w-full h-full relative">
           <Image
             src={bannerThree}
             alt="bannerThree"
             className="w-full h-full relative image-height"
+            priority
           />
-          <BannerText title="In Season" />
+          <BannerText title="Street wear" />
         </div>
       </Slider>
+      <div className="absolute w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10" />
     </div>
   );
 }
