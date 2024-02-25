@@ -61,7 +61,7 @@ export default function Banner() {
             className="w-full h-full relative image-height"
             priority
           />
-          <BannerText title="Spring fasion" />
+          <BannerText title="Spring fashion" />
         </div>
         <div className="w-full h-full relative">
           <Image
