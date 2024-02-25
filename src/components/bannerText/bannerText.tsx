@@ -8,7 +8,7 @@ interface BannerTextProps {
 
 export default function BannerText({ title }: BannerTextProps) {
   return (
-    <div className="hidden sm:inline-block md:inline-block lg:inline-block absolute top-0 left-0 w-full h-full">
+    <div className="hidden sm:inline-block md:inline-block lg:inline-block absolute top-0 left-7 w-full h-full">
       <Container className="flex flex-col gap-y-6 justify-center h-full">
         <motion.h2
           initial={{ y: 30, opacity: 0 }}

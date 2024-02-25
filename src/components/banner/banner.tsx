@@ -61,7 +61,7 @@ export default function Banner() {
             className="w-full h-full relative image-height"
             priority
           />
-          <BannerText title="Street wear" />
+          <BannerText title="Spring fasion" />
         </div>
         <div className="w-full h-full relative">
           <Image
@@ -70,7 +70,7 @@ export default function Banner() {
             className="w-full h-full relative image-height"
             priority
           />
-          <BannerText title="Street wear" />
+          <BannerText title="Sleek looks" />
         </div>
       </Slider>
       <div className="absolute w-full h-32 bg-gradient-to-t from-gray-100 to-transparent bottom-0 left-0 z-10" />
