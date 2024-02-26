@@ -14,7 +14,7 @@ export default function BannerText({ title }: BannerTextProps) {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-7xl font-extrabold text-white">
+          className="text-7xl font-extrabold text-white drop-shadow-xl">
           {title}
         </motion.h2>
         <motion.p
