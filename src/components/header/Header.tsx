@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../container/container";
+import Container from "../container/Container";
 import Logo from "../logo/Logo";
 import { BsCart } from "react-icons/bs";
 import { GoSearch } from "react-icons/go";

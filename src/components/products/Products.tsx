@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import useFetch from "@/constants/data";
-import Container from "../container/container";
+import Container from "../container/Container";
 
 interface Product {
   id: string;
@@ -15,7 +15,7 @@ export default function Products() {
     "https://v2.api.noroff.dev/online-shop"
   );
 
-  console.log(data);
+//   console.log(data);
 
   if (isLoading) {
     return (
@@ -42,10 +42,10 @@ export default function Products() {
   }
 
   return (
-    <Container>
+    <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 -mt-10">
       {data.data.map((product: Product) => (
-        <div key={product.id} className="border border-black">
-          <h2 className="">{product.title}</h2>
+        <div key={product.id} className="">
+          <h2 className="text-red-500">{product.title}</h2>
           <p>{product.price}</p>
           <p>{product.description}</p>
         </div>
