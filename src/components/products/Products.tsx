@@ -2,12 +2,26 @@
 import React from "react";
 import useFetch from "@/constants/data";
 import Container from "../container/Container";
+import Image from "next/image";
 
 interface Product {
   id: string;
   title: string;
   price: number;
   description: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+  rating: number;
+  reviews: [
+    {
+      id: string;
+      username: string;
+      rating: number;
+      description: string;
+    }
+  ];
 }
 
 export default function Products() {
@@ -15,7 +29,7 @@ export default function Products() {
     "https://v2.api.noroff.dev/online-shop"
   );
 
-//   console.log(data);
+  //   console.log(data);
 
   if (isLoading) {
     return (
@@ -46,7 +60,9 @@ export default function Products() {
       {data.data.map((product: Product) => (
         <div key={product.id} className="">
           <h2 className="text-red-500">{product.title}</h2>
+          <Image src={product.image.url} alt={product.title} width={300} height={300} />
           <p>{product.price}</p>
+          <p>{product.rating}</p>
           <p>{product.description}</p>
         </div>
       ))}
