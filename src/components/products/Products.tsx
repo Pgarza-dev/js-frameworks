@@ -58,11 +58,16 @@ export default function Products() {
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 -mt-10">
       {data.data.map((product: Product) => (
-        <div key={product.id} className="">
+        <div key={product.id} className="w-full rounded-lg overflow-hidden">
           <h2 className="text-red-500">{product.title}</h2>
-          <Image src={product.image.url} alt={product.title} width={300} height={300} />
+          <p>Rating {product.rating}</p>
+          <Image
+            src={product?.image.url}
+            alt={product.title}
+            width={500}
+            height={300}
+          />
           <p>{product.price}</p>
-          <p>{product.rating}</p>
           <p>{product.description}</p>
         </div>
       ))}
