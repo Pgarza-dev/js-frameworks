@@ -32,7 +32,7 @@ export default function Products() {
     );
   }
 
-  if (!data || data.length === 0) {
+  if (!data || data.data.length === 0) {
     return (
       <div>
         <p>No products available.</p>
