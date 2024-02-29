@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import useFetch from "@/constants/data";
+import Container from "../container/container";
 
 interface Product {
   id: string;
@@ -41,7 +42,7 @@ export default function Products() {
   }
 
   return (
-    <div>
+    <Container>
       {data.data.map((product: Product) => (
         <div key={product.id} className="border border-black">
           <h2 className="">{product.title}</h2>
@@ -49,6 +50,6 @@ export default function Products() {
           <p>{product.description}</p>
         </div>
       ))}
-    </div>
+    </Container>
   );
 }

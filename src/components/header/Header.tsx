@@ -7,7 +7,7 @@ import { RiUserShared2Line } from "react-icons/ri";
 
 export default function Header() {
   return (
-    <header className="lightModeBody h-20 ">
+    <header className="bg-lightModeBody h-20 top-0 sticky z-50">
       <Container className="h-full flex items-center md:gap-x-5 justify-between md:justify-start">
         <Logo />
         {/* Search bar */}
