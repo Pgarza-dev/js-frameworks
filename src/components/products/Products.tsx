@@ -3,6 +3,7 @@ import React from "react";
 import useFetch from "@/constants/data";
 import Container from "../container/Container";
 import Image from "next/image";
+import calculateDiscountedPrice from "@/utils/index";
 
 interface Product {
   id: string;
@@ -70,12 +71,24 @@ export default function Products() {
             height={500}
             className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
           />
-          <span className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-3 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
+          <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-3 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
             {product?.title}
-          </span>
+          </p>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
-            <p className="text-lg font-bold">${product?.price}</p>
-            <p className="text-lg font-bold">${product?.discountedPrice}</p>
+            <div className="flex flex-row justify-between items-center">
+              <div className="border-[1px] rounded-full text-sm border-lightModePrimary px-2 py-1">
+                <p className="text-sm font-bold">
+                  {calculateDiscountedPrice(
+                    product?.price,
+                    product?.discountedPrice
+                  )}
+                  % off
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-bold">${product?.discountedPrice}</p>
+              </div>
+            </div>
             <p className=" text-gray-500 group-hover:text-primary">
               {product?.description}
             </p>
