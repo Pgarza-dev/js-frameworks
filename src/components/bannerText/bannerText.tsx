@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../container/container";
+import Container from "@/components/container/Container";
 import { motion } from "framer-motion";
 
 interface BannerTextProps {

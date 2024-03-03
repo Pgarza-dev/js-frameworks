@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import useFetch from "@/constants/data";
-import Container from "../container/Container";
+import Container from "@/components/container/Container";
 import Image from "next/image";
 import calculateDiscountedPrice from "@/utils/index";
+import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 
 interface Product {
   id: string;
@@ -71,7 +72,7 @@ export default function Products() {
             height={500}
             className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
           />
-          <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-3 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
+          <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
             {product?.title}
           </p>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
@@ -85,13 +86,25 @@ export default function Products() {
                   % off
                 </p>
               </div>
-              <div>
-                <p className="text-sm font-bold">${product?.discountedPrice}</p>
+              <div className="flex flex-row item-center gap-3 ">
+                <p className="text-sm text-lightModeAccent line-through">
+                  <FormattedPrice amount={product?.price} />
+                </p>
+                <p className="font-semibold">
+                  <FormattedPrice amount={product?.discountedPrice} />
+                </p>
               </div>
             </div>
-            <p className=" text-gray-500 group-hover:text-primary">
-              {product?.description}
-            </p>
+            <div>
+              <p className="text-sm text-gray-500">
+                {product?.rating} stars ({product?.reviews.length} reviews)
+              </p>
+            </div>
+            <div>
+              <p className=" text-gray-500 group-hover:text-primary">
+                {product?.description}
+              </p>
+            </div>
           </div>
         </div>
       ))}
