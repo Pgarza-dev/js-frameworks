@@ -9,6 +9,8 @@ interface Product {
   title: string;
   price: number;
   description: string;
+  discountedPrice: number;
+  tags: string[];
   image: {
     url: string;
     alt: string;
@@ -73,6 +75,7 @@ export default function Products() {
           </span>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
             <p className="text-lg font-bold">${product?.price}</p>
+            <p className="text-lg font-bold">${product?.discountedPrice}</p>
             <p className=" text-gray-500 group-hover:text-primary">
               {product?.description}
             </p>
