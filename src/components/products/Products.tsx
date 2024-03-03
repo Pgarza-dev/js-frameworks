@@ -77,29 +77,39 @@ export default function Products() {
           </p>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
             <div className="flex flex-row justify-between items-center">
-              <div className="border-[1px] rounded-full text-sm border-lightModePrimary px-2 py-1">
-                <p className="text-sm font-bold">
-                  {calculateDiscountedPrice(
+              <div className=" text-sm border-lightModePrimary px-2 py-1">
+                {Number(
+                  calculateDiscountedPrice(
                     product?.price,
                     product?.discountedPrice
-                  )}
-                  % off
-                </p>
+                  )
+                ) > 0 && (
+                  <p className="text-sm font-bold">
+                    {calculateDiscountedPrice(
+                      product?.price,
+                      product?.discountedPrice
+                    )}
+                    % off
+                  </p>
+                )}
               </div>
               <div className="flex flex-row item-center gap-3 ">
-                <p className="text-sm text-lightModeAccent line-through">
-                  <FormattedPrice amount={product?.price} />
-                </p>
+                {product?.price !== product?.discountedPrice && (
+                  <p className="text-sm text-lightModeAccent line-through">
+                    <FormattedPrice amount={product?.price} />
+                  </p>
+                )}
                 <p className="font-semibold">
                   <FormattedPrice amount={product?.discountedPrice} />
                 </p>
               </div>
             </div>
-            <div>
+            {/* <div className="flex items-center justify-between">
               <p className="text-sm text-gray-500">
                 {product?.rating} stars ({product?.reviews.length} reviews)
               </p>
-            </div>
+              <button className="">add to cart</button>
+            </div> */}
             <div>
               <p className=" text-gray-500 group-hover:text-primary">
                 {product?.description}
