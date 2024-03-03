@@ -111,7 +111,7 @@ export default function Products() {
               <button className="">add to cart</button>
             </div> */}
             <div>
-              <p className=" text-gray-500 group-hover:text-primary">
+              <p className=" text-gray-500 group-hover:text-primary line-clamp-2">
                 {product?.description}
               </p>
             </div>
