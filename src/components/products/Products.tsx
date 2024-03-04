@@ -5,6 +5,7 @@ import Container from "@/components/container/Container";
 import Image from "next/image";
 import calculateDiscountedPrice from "@/utils/index";
 import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
+import { IoIosStar } from "react-icons/io";
 
 interface Product {
   id: string;
@@ -104,17 +105,29 @@ export default function Products() {
                 </p>
               </div>
             </div>
-            {/* <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-500">
-                {product?.rating} stars ({product?.reviews.length} reviews)
-              </p>
-              <button className="">add to cart</button>
-            </div> */}
-            <div>
+            <div className="flex items-center justify-between">
+              <div className="flex flex-col text-sm gap-2">
+                <p className="text-sm text-gray-500 flex flex-row items-center">
+                  {Array.from({ length: product?.rating }, (_, index) => (
+                    <span key={index} className="text-yellow-400 text-xl">
+                      <IoIosStar />
+                    </span>
+                  ))}
+                </p>
+                <p>
+                  Reviews ( {product?.reviews.length} )
+                </p>
+              </div>
+
+              <button className="border-[1px] px-2 py-3 border-bg-lightModePrimary text-sm hover:border-white hover:text-lightModePrimary hover:shadow-none shadow-md tracking-wide">
+                Add to cart
+              </button>
+            </div>
+            {/* <div>
               <p className=" text-gray-500 group-hover:text-primary line-clamp-2">
                 {product?.description}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       ))}
