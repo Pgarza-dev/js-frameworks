@@ -61,11 +61,11 @@ export default function Products() {
   }
 
   return (
-    <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 -mt-10 rounded-lg ">
+    <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 -mt-10 rounded-lg ">
       {data.data.map((product: Product) => (
         <div
           key={product?.id}
-          className="w-96 group relative overflow-hidden rounded-lg">
+          className="w-72 group relative overflow-hidden rounded-lg">
           <Image
             src={product.image.url}
             alt={product.title}
