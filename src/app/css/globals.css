@@ -8,3 +8,9 @@
   object-fit: cover;
   object-position: calc(50% - 1px) calc(2% - 30px);
 }
+
+@layer components {
+  .socialIcons {
+    @apply inline-flex items-center justify-center rounded-md text-lg hover:bg-white p-1 hover:text-lightModeText;
+  }
+}

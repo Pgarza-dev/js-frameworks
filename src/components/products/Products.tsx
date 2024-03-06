@@ -61,7 +61,7 @@ export default function Products() {
   }
 
   return (
-    <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 -mt-10 rounded-lg ">
+    <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 -mt-10 rounded-lg">
       {data.data.map((product: Product) => (
         <div
           key={product?.id}
@@ -114,9 +114,7 @@ export default function Products() {
                     </span>
                   ))}
                 </p>
-                <p>
-                  Reviews ( {product?.reviews.length} )
-                </p>
+                <p>Reviews ( {product?.reviews.length} )</p>
               </div>
 
               <button className="border-[1px] px-2 py-3 border-bg-lightModePrimary text-sm hover:border-white hover:text-lightModePrimary hover:shadow-none shadow-md tracking-wide">
