@@ -2,7 +2,7 @@ import Container from "@/components/container/Container";
 import Link from "next/link";
 import React from "react";
 
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
     <Container className="flex items-center justify-center py-20">
       <div className="max-w-2xl min-h-[500px] flex flex-col items-center justify-center gap-y-5">
@@ -18,6 +18,6 @@ const NotFoundPage = () => {
       </div>
     </Container>
   );
-};
+}
 
-export default NotFoundPage;
+// export default NotFoundPage;
