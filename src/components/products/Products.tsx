@@ -62,22 +62,22 @@ export default function Products() {
   }
 
   return (
-    <Container className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 -mt-10 rounded-lg">
+    <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -mt-10 rounded-lg gap-4 justify-items-center">
       {data.data.map((product: Product) => (
         <div
           key={product?.id}
           className="w-72 group relative overflow-hidden rounded-lg">
           <Link href={{ pathname: "/item", query: { _id: product?.id } }}>
-          <Image
-            src={product.image.url}
-            alt={product.title}
-            width={500}
-            height={500}
-            className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
-          />
-          <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
-            {product?.title}
-          </p>
+            <Image
+              src={product.image.url}
+              alt={product.title}
+              width={500}
+              height={500}
+              className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
+            />
+            <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
+              {product?.title}
+            </p>
           </Link>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
             <div className="flex flex-row justify-between items-center">
