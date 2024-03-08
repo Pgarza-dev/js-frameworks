@@ -1,10 +1,14 @@
-type ItemPageProps = {
-  searchParams: string | string[] | undefined;
-};
+import React from 'react';
+import { Product } from '@/components/products/Products';
+import useFetch from '@/constants/data';
 
-const itemPage = ({searchParams}: ItemPageProps) => {
-  // console.log(searchParams);
-  return <div>single item</div>;
-};
 
-export default itemPage;
+function ProductPage() {
+  return (
+    <div>
+      this is the item ProductPage
+    </div>
+  )
+}
+
+export default ProductPage

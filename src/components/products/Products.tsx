@@ -8,7 +8,7 @@ import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 import { IoIosStar } from "react-icons/io";
 import Link from "next/link";
 
-interface Product {
+export interface Product {
   id: string;
   title: string;
   price: number;

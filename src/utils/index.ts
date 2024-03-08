@@ -15,10 +15,3 @@ export default function calculateDiscountedPrice(
     : 0;
 }
 
-async function getSingleProduct(id: number): Promise<any> {
-  const response = await fetch(
-    `https://v2.api.noroff.dev/online-shop/products/${id}`
-  );
-  const data = await response.json();
-  return data;
-}
