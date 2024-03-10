@@ -7,6 +7,7 @@ import calculateDiscountedPrice from "@/utils";
 import Image from "next/image";
 import { IoIosStar } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
+import { MdFavoriteBorder } from "react-icons/md";
 
 type ProductDetailsProps = {
   params: { [key: string]: string | string[] | undefined };
@@ -58,28 +59,53 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
           className="max-h-[700px] max-w-[800px] object-cover rounded-lg"
         />
         <div className="flex flex-col justify-center gap-10">
-          <p className="text-3xl font-semibold">{product?.title}</p>
-          <p className="text-xl font-semibold">
+          <p className="text-4xl font-semibold">{product?.title}</p>
+          <div className="flex flex-row gap-4">
+            <p className="text-red-500 font-semibold animate-bounce">
+              {Number(
+                calculateDiscountedPrice(
+                  product?.price,
+                  product?.discountedPrice
+                )
+              ) > 0 && (
+                <span className="text-lg font-bold">
+                  {calculateDiscountedPrice(
+                    product?.price,
+                    product?.discountedPrice
+                  )}
+                  % off
+                </span>
+              )}
+            </p>
+          </div>
+
+          <p className="text-2xl font-semibold">
             <FormattedPrice amount={product?.price} />
           </p>
-          <p className="text-gray-500">{product?.description}</p>
+          <p className="text-gray-500 text-lg">{product?.description}</p>
           <div className="text-xs text-lightText hover:text-gray-500 flex flex-col gap-2">
             <span className="text-base text-gray-500">
-              Category:{" "}
-              <span className="text-lightModePrimary">{product?.tags}</span>
+              Category:
+              <span className="text-lightModePrimary ps-2 capitalize">
+                {product?.tags}
+              </span>
             </span>
             <span>
               SKU: <span>{product?.id}</span>
             </span>
           </div>
           <div className="flex items-center cursor-pointer group">
-            <button className="text-lightText text-sm px-20 py-3 bg-lightModeText border-r-[1px]">
+            <button className="text-lightText text-sm px-20 py-3 bg-lightModeText border-r-[1px] uppercase ">
               Add to cart
             </button>
-            <span className="bg-darkText text-xl text-lightText p-3 w-12 flex items-center justify-center hover:ring-2 hover:bg-slate-50 hover:ring-darkText hover:text-darkText">
+            <span className="bg-darkText text-xl text-lightText p-3 w-12 flex items-center justify-center group-hover:ring-1 duration-300 group-hover:ring-black group-hover:bg-slate-50 group-hover:text-darkText">
               <IoMdCart />
             </span>
           </div>
+          <p className="flex items-center gap-2 text-sm  group hover:text-darkText duration-300 cursor-pointer ">
+            <MdFavoriteBorder className="text-xl group-hover:text-red-600" />
+            Add to wishlist
+          </p>
           <div>
             <article>
               <span className="text-sm text-gray-500 flex flex-row items-center">
