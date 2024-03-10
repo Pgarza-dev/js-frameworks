@@ -28,6 +28,7 @@ export interface Product {
       description: string;
     }
   ];
+  productsId: string;
 }
 
 export default function Products() {
@@ -67,7 +68,7 @@ export default function Products() {
         <div
           key={product?.id}
           className="w-72 group relative overflow-hidden rounded-lg">
-          <Link href={{ pathname: "/item", query: { _id: product?.id } }}>
+          <Link href={`/products/${product?.id}`}>
             <Image
               src={product.image.url}
               alt={product.title}

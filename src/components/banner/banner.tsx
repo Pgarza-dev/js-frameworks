@@ -50,7 +50,6 @@ export default function Banner() {
             src={bannerOne}
             alt="bannerOne"
             className="w-full h-full relative image-height"
-            priority={true}
           />
           <BannerText title="Street wear" />
         </div>
@@ -59,7 +58,6 @@ export default function Banner() {
             src={bannerTwo}
             alt="bannerTwo"
             className="w-full h-full relative image-height"
-            priority={true}
           />
           <BannerText title="Spring fashion" />
         </div>
@@ -68,7 +66,6 @@ export default function Banner() {
             src={bannerThree}
             alt="bannerThree"
             className="w-full h-full relative image-height"
-            priority={true}
           />
           <BannerText title="Sleek looks" />
         </div>

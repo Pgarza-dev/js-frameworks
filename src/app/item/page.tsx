@@ -1,14 +1,14 @@
-import React from 'react';
-import { Product } from '@/components/products/Products';
-import useFetch from '@/constants/data';
+// THIS PAGE MAY NOT BE NEEDED!!
 
 
-function ProductPage() {
-  return (
-    <div>
-      this is the item ProductPage
-    </div>
-  )
-}
 
-export default ProductPage
+
+// import React from "react";
+// import { Product } from "@/app/products/Products";
+// import useFetch from "@/constants/data";
+
+// function ProductPage() {
+//   return <div>this is the item ProductPage</div>;
+// }
+
+// export default ProductPage;
