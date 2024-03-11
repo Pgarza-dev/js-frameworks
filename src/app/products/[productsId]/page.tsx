@@ -102,10 +102,10 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               <IoMdCart />
             </span>
           </div>
-          <p className="flex items-center gap-2 text-sm  group hover:text-darkText duration-300 cursor-pointer ">
+          <button className="flex items-center justify-center gap-2 text-sm group hover:text-darkText duration-300 cursor-pointer border hover:border-black w-40 py-4">
             <MdFavoriteBorder className="text-xl group-hover:text-red-600" />
             Add to wishlist
-          </p>
+          </button>
           <div>
             <article>
               <span className="text-sm text-gray-500 flex flex-row items-center">

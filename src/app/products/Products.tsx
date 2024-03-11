@@ -7,6 +7,7 @@ import calculateDiscountedPrice from "@/utils/index";
 import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 import { IoIosStar } from "react-icons/io";
 import Link from "next/link";
+import { API_PRODUCTS } from "@/shared/apis";
 
 export interface Product {
   id: string;
@@ -32,9 +33,7 @@ export interface Product {
 }
 
 export default function Products() {
-  const { data, isLoading, isError } = useFetch(
-    "https://v2.api.noroff.dev/online-shop"
-  );
+  const { data, isLoading, isError } = useFetch(API_PRODUCTS);
 
   //   console.log(data);
 
