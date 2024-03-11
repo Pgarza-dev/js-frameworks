@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-lightModeBody">
         <Header />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
