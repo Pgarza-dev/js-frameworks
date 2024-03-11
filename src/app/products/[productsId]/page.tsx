@@ -2,7 +2,7 @@
 import { Product } from "@/app/products/Products";
 import Container from "@/components/container/Container";
 import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
-import useFetch from "@/constants/data";
+import useFetch from "@/hooks/data";
 import calculateDiscountedPrice from "@/utils";
 import Image from "next/image";
 import { IoIosStar } from "react-icons/io";

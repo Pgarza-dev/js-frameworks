@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import useFetch from "@/constants/data";
+import useFetch from "@/hooks/data";
 import Container from "@/components/container/Container";
 import Image from "next/image";
 import calculateDiscountedPrice from "@/utils/index";
