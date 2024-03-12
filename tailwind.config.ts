@@ -9,9 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       darkMode: "selector",
-      backgroundImage: {
-        "main-bg": "url('/main1.jpg')",
-      },
       fontFamily: {
         sans: ["Poppins"],
       },
