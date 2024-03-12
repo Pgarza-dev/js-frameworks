@@ -56,10 +56,12 @@ export default function Products() {
   if (!data || data.data.length === 0) {
     return (
       <div>
-        <p>No products available.</p>
+        <p>Fetching products...</p>
       </div>
     );
   }
+
+  
 
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -mt-10 rounded-lg gap-4 justify-items-center">

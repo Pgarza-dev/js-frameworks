@@ -1,71 +1,96 @@
+import { create } from "zustand";
+import { API_PRODUCTS } from "@/shared/apis";
 
-import { create, StateCreator } from 'zustand';
-import { API_PRODUCTS } from '@/shared/apis';
-
-interface Product {
-    id: string;
-    quantity: number;
-    price: number;
+export interface Product {
+  id: string;
+  title: string;
+  price: number;
+  description: string;
+  discountedPrice: number;
+  tags: string[];
+  image: {
+    url: string;
+    alt: string;
+  };
+  rating: number;
+  reviews: [
+    {
+      id: string;
+      username: string;
+      rating: number;
+      description: string;
+    }
+  ];
+  productsId: string;
+  quantity: number;
 }
 
 interface State {
-    products: Product[];
-    cart: Product[];
-    fetchProducts: () => Promise<void>;
-    addToCart: (id: string) => void;
-    clearCart: () => void;
-    deleteProductFromCart: (id: string) => void;
-    getCartTotal: () => number;
-    getTotalNumberOfItemsInCart: () => number;
+  products: Product[];
+  cart: Product[];
+  fetchProducts: () => Promise<void>;
+  addToCart: (id: string) => void;
+  clearCart: () => void;
+  deleteProductFromCart: (id: string) => void;
+  getCartTotal: () => number;
+  getTotalNumberOfItemsInCart: () => number;
 }
 
 const useProductStore = create<State>((set, get) => ({
-    products: [],
-    cart: [],
-    fetchProducts: async () => {
-        const response = await fetch(API_PRODUCTS);
-        const json = await response.json();
-        set((state) => ({ ...state, products: json.data }));
-    },
-    addToCart: (id: string) => {
-        set((state) => {
-            const product = state.products.find(
-                (currentProduct: Product) => id === currentProduct.id,
-            );
-            const productInCartIndex = state.cart.findIndex(
-                (currentProduct: Product) => id === currentProduct.id,
-            );
-            if (productInCartIndex === -1) {
-                product!.quantity = 1;
-                return { ...state, cart: [...state.cart, product!] };
-            }
-            state.cart[productInCartIndex].quantity += 1;
-            return { ...state };
-        });
-    },
-    clearCart: () => set(() => ({ cart: [] })),
-    deleteProductFromCart: (id: string) =>
-        set((state) => {
-            const updatedCart = state.cart.filter((product: Product) => {
-                if (product.id === id) {
-                    return false;
+  products: [],
+  cart: [],
+  fetchProducts: async () => {
+    // console.log("fetching products");
+
+    const response = await fetch(API_PRODUCTS);
+    const json = await response.json();
+    set((state) => ({ ...state, products: json.data }));
+  },
+addToCart: (id: string) => {
+    set((state) => {
+        const product = state.products.reduce(
+            (foundProduct: Product | null, currentProduct: Product) => {
+                if (id === currentProduct.id) {
+                    return currentProduct;
                 }
-                return true;
-            });
-            return { ...state, cart: updatedCart };
-        }),
-    getCartTotal: () =>
-        get().cart.reduce((total: number, product: Product) => {
-            const currentPrice = product.quantity * product.price;
-            total += currentPrice;
-            return total;
-        }, 0),
-    getTotalNumberOfItemsInCart: () =>
-        get().cart.reduce((total: number, product: Product) => {
-            total += product.quantity;
-            return total;
-        }, 0),
+                return foundProduct;
+            },
+            null
+        );
+        const productInCartIndex = state.cart.findIndex(
+            (currentProduct: Product) => id === currentProduct.id
+        );
+        if (productInCartIndex === -1) {
+            product!.quantity = 1;
+            return { ...state, cart: [...state.cart, product!] };
+        }
+
+        state.cart[productInCartIndex].quantity += 1;
+        return { ...state, cart: [...state.cart, product!] };
+    });
+},
+  clearCart: () => set(() => ({ cart: [] })),
+  deleteProductFromCart: (id: string) =>
+    set((state) => {
+      const updatedCart = state.cart.filter((product: Product) => {
+        if (product.id === id) {
+          return false;
+        }
+        return true;
+      });
+      return { ...state, cart: updatedCart };
+    }),
+  getCartTotal: () =>
+    get().cart.reduce((total: number, product: Product) => {
+      const currentPrice = product.quantity * product.price;
+      total += currentPrice;
+      return total;
+    }, 0),
+  getTotalNumberOfItemsInCart: () =>
+    get().cart.reduce((total: number, product: Product) => {
+      total += product.quantity;
+      return total;
+    }, 0),
 }));
 
 export default useProductStore;
-

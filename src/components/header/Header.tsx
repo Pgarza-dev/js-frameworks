@@ -1,11 +1,16 @@
+"use client";
 import React from "react";
 import Container from "../container/Container";
 import Logo from "../logo/Logo";
 import { BsCart } from "react-icons/bs";
 import { GoSearch } from "react-icons/go";
 import { RiUserShared2Line } from "react-icons/ri";
+import useProductStore from "@/store/cart";
 
 export default function Header() {
+  const cart = useProductStore((state) => state.cart);
+  console.log({ cart });
+  
   return (
     <header className="bg-lightModeBody h-20 top-0 sticky z-50">
       <Container className="h-full flex items-center md:gap-x-5 justify-between md:justify-start">
@@ -29,7 +34,7 @@ export default function Header() {
           <BsCart className="text-xl text-lightText" />
           <p className="text-sm ps-1">$0.00</p>
           <span className="bg-lightModeBody shadow-xl shadow-black text-orange-500 rounded-full text-sm font-semibold absolute -right-2 -top-1 w-5 h-5 flex items-center justify-center">
-            0
+            {cart.length}
           </span>
         </div>
       </Container>
