@@ -46,29 +46,29 @@ const useProductStore = create<State>((set, get) => ({
     const json = await response.json();
     set((state) => ({ ...state, products: json.data }));
   },
-addToCart: (id: string) => {
+  addToCart: (id: string) => {
     set((state) => {
-        const product = state.products.reduce(
-            (foundProduct: Product | null, currentProduct: Product) => {
-                if (id === currentProduct.id) {
-                    return currentProduct;
-                }
-                return foundProduct;
-            },
-            null
-        );
-        const productInCartIndex = state.cart.findIndex(
-            (currentProduct: Product) => id === currentProduct.id
-        );
-        if (productInCartIndex === -1) {
-            product!.quantity = 1;
-            return { ...state, cart: [...state.cart, product!] };
-        }
-
-        state.cart[productInCartIndex].quantity += 1;
+      const product = state.products.reduce(
+        (foundProduct: Product | null, currentProduct: Product) => {
+          if (id === currentProduct.id) {
+            return currentProduct;
+          }
+          return foundProduct;
+        },
+        null
+      );
+      const productInCartIndex = state.cart.findIndex(
+        (currentProduct: Product) => id === currentProduct.id
+      );
+      if (productInCartIndex === -1) {
+        product!.quantity = 1;
         return { ...state, cart: [...state.cart, product!] };
+      }
+
+      state.cart[productInCartIndex].quantity += 1;
+      return { ...state, cart: [...state.cart, product!] };
     });
-},
+  },
   clearCart: () => set(() => ({ cart: [] })),
   deleteProductFromCart: (id: string) =>
     set((state) => {
