@@ -3,6 +3,7 @@ import { Product } from "@/app/products/Products";
 import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 import useProductStore from "@/store/cart";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import { IoIosStar } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
@@ -80,17 +81,27 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             SKU: <span>{product?.id}</span>
           </span>
         </div>
-        <div className="flex items-center cursor-pointer group">
-          <button
-            onClick={handleAddToCart}
-            className="text-lightText text-sm px-20 py-3 bg-lightModeText border-r-[1px] uppercase">
-            Add to cart
-          </button>
-          <span className="bg-darkText text-xl text-lightText p-3 w-12 flex items-center justify-center group-hover:ring-1 duration-300 group-hover:ring-black group-hover:bg-slate-50 group-hover:text-darkText">
-            <IoMdCart />
-          </span>
+        <div className="flex flex-row gap-4">
+          <div className="flex items-center cursor-pointer group">
+            <button
+              onClick={handleAddToCart}
+              className="text-lightText text-sm px-20 py-3 bg-lightModeText border-r-[1px] uppercase">
+              Add to cart
+            </button>
+            <span className="bg-darkText text-xl text-lightText p-3 w-12 flex items-center justify-center group-hover:ring-1 duration-300 group-hover:ring-black group-hover:bg-slate-50 group-hover:text-darkText">
+              <IoMdCart />
+            </span>
+          </div>
+          <div>
+            <Link href={"/checkout"}>
+              <button className="text-sm text-darkText px-20 py-3 uppercase hover:text-darkText duration-300 cursor-pointer border  hover:border-black shadow-sm hover:shadow-lg">
+                Buy now
+              </button>
+            </Link>
+          </div>
         </div>
-        <button className="flex items-center justify-center gap-2 text-sm group hover:text-darkText duration-300 cursor-pointer border hover:border-black w-40 py-4">
+
+        <button className="flex items-center justify-center gap-2 text-sm group hover:text-darkText duration-300 cursor-pointer border hover:border-black w-40 py-4 shadow-sm hover:shadow-lg">
           <MdFavoriteBorder className="text-xl group-hover:text-red-600" />
           Add to wishlist
         </button>

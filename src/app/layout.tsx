@@ -1,8 +1,8 @@
-import Header from "@/components/header/Header";
-import "./css/globals.css";
 import type { Metadata } from "next";
-import "slick-carousel/slick/slick.css";
+import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import "slick-carousel/slick/slick.css";
+import "./css/globals.css";
 
 export const metadata: Metadata = {
   title: {

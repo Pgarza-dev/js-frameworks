@@ -1,7 +1,22 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   images: {
+//     domains: ["static.noroff.dev"],
+//   },
+// };
+
+// export default nextConfig;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["static.noroff.dev"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "static.noroff.dev",
+        pathname: "**",
+      },
+    ],
   },
 };
 
