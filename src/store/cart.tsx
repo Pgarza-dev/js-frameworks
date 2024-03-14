@@ -34,6 +34,8 @@ interface State {
   deleteProductFromCart: (id: string) => void;
   getCartTotal: () => number;
   getTotalNumberOfItemsInCart: () => number;
+  deleteSingleProductFromCart: (id: string) => void;
+  addSingleProductToCart: (id: string) => void;
 }
 
 const useProductStore = create<State>((set, get) => ({
@@ -91,6 +93,31 @@ const useProductStore = create<State>((set, get) => ({
       total += product.quantity;
       return total;
     }, 0),
+  deleteSingleProductFromCart: (id: string) =>
+    set((state) => {
+      const productInCartIndex = state.cart.findIndex(
+        (currentProduct: Product) => id === currentProduct.id
+      );
+      if (state.cart[productInCartIndex].quantity > 1) {
+        state.cart[productInCartIndex].quantity -= 1;
+        return { ...state, cart: [...state.cart] };
+      }
+      const updatedCart = state.cart.filter((product: Product) => {
+        if (product.id === id) {
+          return false;
+        }
+        return true;
+      });
+      return { ...state, cart: updatedCart };
+    }),
+  addSingleProductToCart: (id: string) =>
+    set((state) => {
+      const productInCartIndex = state.cart.findIndex(
+        (currentProduct: Product) => id === currentProduct.id
+      );
+      state.cart[productInCartIndex].quantity += 1;
+      return { ...state, cart: [...state.cart] };
+    }),
 }));
 
 export default useProductStore;

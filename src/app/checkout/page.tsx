@@ -16,6 +16,8 @@ function Checkout() {
     clearCart,
     deleteProductFromCart,
     getTotalNumberOfItemsInCart,
+    deleteSingleProductFromCart,
+    addSingleProductToCart,
   } = useProductStore();
 
   return (
@@ -63,13 +65,13 @@ function Checkout() {
                       <td>
                         <div className="flex flex-row items-center justify-center">
                           <button
-                            onClick={() => addToCart(item.id)}
+                            onClick={() => addSingleProductToCart(item.id)}
                             className=" px-3 hover:bg-lightText font-extrabold">
                             <BiPlus />
                           </button>
                           <span className="px-6">{item.quantity}</span>
                           <button
-                            onClick={() => deleteProductFromCart(item.id)}
+                            onClick={() => deleteSingleProductFromCart(item.id)}
                             className=" px-3 hover:bg-lightText font-extrabold">
                             <BiMinus />
                           </button>
