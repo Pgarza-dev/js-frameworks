@@ -1,13 +1,14 @@
 "use client";
-import { Product } from "@/app/products/Products";
-import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 import useProductStore from "@/store/cart";
+import { Product } from "@/app/products/Products";
+import { useEffect } from "react";
+import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import { IoIosStar } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
 import { MdFavoriteBorder } from "react-icons/md";
+import toast, { Toaster } from "react-hot-toast";
 
 export type ProductDetailsProps = {
   params: { [key: string]: string | string[] | undefined };
@@ -22,8 +23,18 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
   }, [fetchProducts]);
 
   function handleAddToCart() {
-    addToCart(product?.id);
-    // console.log("added to cart", product?.id);
+    const isProductInCart = cart.some(
+      (item: Product) => item.id === product?.id
+    );
+    if (!isProductInCart) {
+      addToCart(product?.id);
+      toast.success(`${product?.title} added to cart`);
+    }
+    if (isProductInCart) {
+      toast.error(
+        `${product?.title} already in cart! Go to checkout to add more`
+      );
+    }
   }
 
   // if (isLoading) {
@@ -118,6 +129,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
           </article>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }
