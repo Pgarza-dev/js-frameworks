@@ -9,7 +9,7 @@ import useProductStore from "@/store/cart";
 import Link from "next/link";
 
 export default function Header() {
-  const { cart, getCartTotal } = useProductStore();
+  const { cart, getCartTotal, getTotalNumberOfItemsInCart } = useProductStore();
   console.log({ cart });
 
   return (

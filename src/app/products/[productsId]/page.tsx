@@ -9,7 +9,7 @@ import { IoIosStar } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
 import { MdFavoriteBorder } from "react-icons/md";
 
-type ProductDetailsProps = {
+export type ProductDetailsProps = {
   params: { [key: string]: string | string[] | undefined };
 };
 
@@ -23,7 +23,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
 
   function handleAddToCart() {
     addToCart(product?.id);
-    console.log("added to cart", product?.id);
+    // console.log("added to cart", product?.id);
   }
 
   // if (isLoading) {
@@ -93,7 +93,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             </span>
           </div>
           <div>
-            <Link href={"/checkout"}>
+            <Link href={`/checkout`}>
               <button className="text-sm text-darkText px-20 py-3 uppercase hover:text-darkText duration-300 cursor-pointer border  hover:border-black shadow-sm hover:shadow-lg">
                 Buy now
               </button>
