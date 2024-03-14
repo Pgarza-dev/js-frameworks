@@ -8,6 +8,7 @@ import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import Link from "next/link";
 import Container from "@/components/container/Container";
+import { GoTrash } from "react-icons/go";
 
 function Checkout() {
   const {
@@ -83,6 +84,13 @@ function Checkout() {
                         {(Number(item.price) * Number(item.quantity)).toFixed(
                           2
                         )}
+                      </td>
+                      <td>
+                        <button
+                          onClick={() => deleteProductFromCart(item.id)}
+                          className="text-lg text-gray-500 p-1 bg-white hover:shadow-sm  hover:text-red-500">
+                          <GoTrash />
+                        </button>
                       </td>
                     </tr>
                   );
