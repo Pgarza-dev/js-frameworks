@@ -20,7 +20,6 @@ function Checkout() {
     addSingleProductToCart,
   } = useProductStore();
 
-
   return (
     <div>
       <Container className="">
@@ -37,9 +36,8 @@ function Checkout() {
           <div className="flex flex-col bg-white p-6 gap-y-6">
             <table className="w-full">
               <thead>
-                <tr>
-                  <th>Product</th>
-                  <th>Price</th>
+                <tr className="border-b">
+                  <th className="inline-flex">Item</th>
                   <th>Quantity</th>
                   <th>Total</th>
                 </tr>
@@ -49,36 +47,43 @@ function Checkout() {
                   return (
                     <tr key={item.id}>
                       <td>
-                        <div className="flex gap-4">
+                        <div className="flex flex-col gap-x-6 pt-8">
+                          <h2 className="uppercase py-1">{item.title}</h2>
                           <Image
                             src={item.image.url}
                             alt={item.title}
-                            width={100}
-                            height={100}
+                            width={200}
+                            height={200}
+                            className="rounded-lg object-cover"
                           />
-                          <div>
-                            <h2 className="uppercase">{item.title}</h2>
-                            <p className="text-gray-500">{item.description}</p>
+                          <div className="pt-4">
+                            <p className="text-gray-500 hidden md:block">
+                              {item.description}
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>{item.price}</td>
+
                       <td>
                         <div className="flex flex-row items-center justify-center">
                           <button
                             onClick={() => addSingleProductToCart(item.id)}
-                            className=" px-3 hover:bg-lightText font-extrabold">
+                            className=" px-1 hover:bg-lightText font-extrabold">
                             <BiPlus />
                           </button>
-                          <span className="px-6">{item.quantity}</span>
+                          <span className="px-3">{item.quantity}</span>
                           <button
                             onClick={() => deleteSingleProductFromCart(item.id)}
-                            className=" px-3 hover:bg-lightText font-extrabold">
+                            className=" px-1 hover:bg-lightText font-extrabold">
                             <BiMinus />
                           </button>
                         </div>
                       </td>
-                    <td>{(Number(item.price) * Number(item.quantity)).toFixed(2)}</td>
+                      <td className="ps-6">
+                        {(Number(item.price) * Number(item.quantity)).toFixed(
+                          2
+                        )}
+                      </td>
                     </tr>
                   );
                 })}
