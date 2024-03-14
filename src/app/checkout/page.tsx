@@ -20,6 +20,7 @@ function Checkout() {
     addSingleProductToCart,
   } = useProductStore();
 
+
   return (
     <div>
       <Container className="">
@@ -77,7 +78,7 @@ function Checkout() {
                           </button>
                         </div>
                       </td>
-                      <td>{item.price * item.quantity}</td>
+                    <td>{(Number(item.price) * Number(item.quantity)).toFixed(2)}</td>
                     </tr>
                   );
                 })}
