@@ -10,14 +10,14 @@ import Link from "next/link";
 
 export default function Header() {
   const { cart, getCartTotal, getTotalNumberOfItemsInCart } = useProductStore();
-  console.log({ cart });
+  // console.log({ cart });
 
   return (
     <header className="bg-lightModeBody h-20 top-0 sticky z-50">
-      <Container className="h-full flex items-center md:gap-x-5 justify-between md:justify-start">
+      <Container className="h-full flex flex-row items-center md:gap-x-5 justify-between md:justify-start">
         <Logo />
         {/* Search bar */}
-        <div className="group w-full hidden border-2 md:flex items-center gap-x-1 bg-white rounded-full px-4 py-1.5 focus-within:border-lightModePrimary">
+        <div className="group w-full border-2 hidden md:flex items-center gap-x-1 bg-white rounded-full px-4 py-1.5 focus-within:border-lightModePrimary">
           <GoSearch className="text-lightModeText group-focus-within:text-darkText duration-200 " />
           <input
             type="text"
@@ -26,7 +26,7 @@ export default function Header() {
           />
         </div>
         {/* Login Button */}
-        <div className=" text-lightModeText border-2 bg-white flex items-center justify-center p-1.5 rounded-full hover:border-2 hover:border-lightModePrimary cursor-pointer hover:text-lightModeText/30 duration-200">
+        <div className=" text-lightModeText border-2 hidden bg-white sm:flex items-center justify-center p-1.5 rounded-full hover:border-2 hover:border-lightModePrimary cursor-pointer hover:text-lightModeText/30 duration-200">
           <RiUserShared2Line className="text-xl text-lightModeText" />
           <p className="text-sm ps-1">Login/Register</p>
         </div>
