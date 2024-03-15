@@ -9,6 +9,7 @@ import { BiMinus } from "react-icons/bi";
 import Link from "next/link";
 import Container from "@/components/container/Container";
 import { GoTrash } from "react-icons/go";
+import PaymentForm from "@/components/paymentForm/PaymentForm";
 
 function Checkout() {
   const {
@@ -83,6 +84,7 @@ function Checkout() {
           empty cart
         </button>
       </div>
+      <PaymentForm />
     </Container>
 
     // <Container className="">
