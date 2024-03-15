@@ -61,8 +61,6 @@ export default function Products() {
     );
   }
 
-  
-
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -mt-10 rounded-lg gap-4 justify-items-center">
       {data.data.map((product: Product) => (
@@ -73,8 +71,9 @@ export default function Products() {
             <Image
               src={product.image.url}
               alt={product.title}
-              width={500}
-              height={500}
+              width={300}
+              height={300}
+              priority={true}
               className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
             />
             <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
