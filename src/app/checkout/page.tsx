@@ -68,13 +68,20 @@ function Checkout() {
                 {(Number(item.price) * Number(item.quantity)).toFixed(2)}
                 <button
                   onClick={() => deleteProductFromCart(item.id)}
-                  className="text-lg text-gray-500 px-4 bg-white hover:shadow-sm  hover:text-red-500">
+                  className="text-lg text-gray-500 px- bg-white hover:shadow-sm  hover:text-red-500">
                   <GoTrash />
                 </button>
               </div>
             </div>
           );
         })}
+      </div>
+      <div className="flex justify-end">
+        <button
+          onClick={clearCart}
+          className="capitalize bg-primary text-base font-medium text-white py-2 px-6 hover:bg-red-500 duration-200">
+          empty cart
+        </button>
       </div>
     </Container>
 
