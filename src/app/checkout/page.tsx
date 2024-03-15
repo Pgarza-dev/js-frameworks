@@ -45,7 +45,7 @@ function Checkout() {
                     alt="product image"
                     width={500}
                     height={500}
-                    className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32 shadow-lg"
+                    className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32 shadow-md drop-shadow-md"
                   />
                 </div>
                 <div className="p-4 text-center text-pretty text-sm">
@@ -71,7 +71,7 @@ function Checkout() {
                 {(Number(item.price) * Number(item.quantity)).toFixed(2)}
                 <button
                   onClick={() => deleteProductFromCart(item.id)}
-                  className="text-lg text-gray-500 px- bg-white hover:shadow-sm  hover:text-red-500 ring-1 p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse hover:ring-red-500 ring-white">
+                  className="text-lg text-gray-500 bg-white hover:text-red-500 ring-1 p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse hover:ring-red-500 ring-white">
                   <GoTrash />
                 </button>
               </div>

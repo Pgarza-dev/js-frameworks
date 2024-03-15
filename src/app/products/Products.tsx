@@ -120,15 +120,10 @@ export default function Products() {
                 </p>
                 <p>Reviews ( {product?.reviews.length} )</p>
               </div>
-              <button className="border-[1px] px-2 py-3 border-bg-lightModePrimary text-sm hover:border-white hover:text-lightModePrimary tracking-wide">
+              {/* <button className="px-2 py-3  text-sm hover:text-darkText ring-1 ring-white hover:ring-lightModePrimary text-lightModePrimary tracking-wide">
                 Add to cart
-              </button>
+              </button> */}
             </div>
-            {/* <div>
-              <p className=" text-gray-500 group-hover:text-primary line-clamp-2">
-                {product?.description}
-              </p>
-            </div> */}
           </div>
         </div>
       ))}
