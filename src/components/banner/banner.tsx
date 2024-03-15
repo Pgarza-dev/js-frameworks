@@ -49,7 +49,11 @@ export default function Banner() {
           <Image
             src={bannerOne}
             alt="bannerOne"
-            className="w-full h-full relative image-height"
+            className="w-full h-auto relative image-height mx-auto"
+            width={1280}
+            height={1080}
+            priority={true}
+            // sizes="(min-width: 320px) 320px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
           />
           <BannerText title="Street wear" />
         </div>
@@ -57,7 +61,11 @@ export default function Banner() {
           <Image
             src={bannerTwo}
             alt="bannerTwo"
-            className="w-full h-full relative image-height"
+            className="w-full h-auto relative image-height"
+            width={1280}
+            height={1080}
+            priority={true}
+            // sizes="(min-width: 320px) 320px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
           />
           <BannerText title="Spring fashion" />
         </div>
@@ -65,7 +73,11 @@ export default function Banner() {
           <Image
             src={bannerThree}
             alt="bannerThree"
-            className="w-full h-full relative image-height"
+            className="w-full h-auto relative image-height"
+            width={1280}
+            height={1080}
+            priority={true}
+            // sizes="(min-width: 320px) 320px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
           />
           <BannerText title="Sleek looks" />
         </div>

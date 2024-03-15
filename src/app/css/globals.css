@@ -10,6 +10,44 @@
   object-position: calc(50% - 1px) calc(2% - 30px);
 }
 
+@media (min-width: 320px) {
+  .image-height {
+    height: 320px;
+  }
+}
+
+@media (min-width: 375px) {
+  .image-height {
+    height: 375px;
+  }
+}
+
+@media (min-width: 640px) {
+  .image-height {
+    height: 640px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-height {
+    height: 40rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .image-height {
+    height: 40rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .image-height {
+    height: 40rem;
+    width: 1800px;
+    margin: auto;
+  }
+}
+
 @layer components {
   .socialIcons {
     @apply inline-flex items-center justify-center rounded-md text-lg hover:bg-white p-1 hover:text-lightModeText;

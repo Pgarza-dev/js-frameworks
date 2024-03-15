@@ -14,6 +14,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "static.noroff.dev",
+        port: "",
         pathname: "**",
       },
     ],
