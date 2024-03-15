@@ -120,8 +120,7 @@ export default function Products() {
                 </p>
                 <p>Reviews ( {product?.reviews.length} )</p>
               </div>
-
-              {/* <button className="border-[1px] px-2 py-3 border-bg-lightModePrimary text-sm hover:border-white hover:text-lightModePrimary hover:shadow-none shadow-md tracking-wide">
+              {/* <button className="border-[1px] px-2 py-3 border-bg-lightModePrimary text-sm hover:border-white hover:text-lightModePrimary tracking-wide">
                 Add to cart
               </button> */}
             </div>

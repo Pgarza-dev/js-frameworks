@@ -33,7 +33,7 @@ export default function Header() {
         </div>
         {/* cart button */}
         <Link href="/checkout">
-          <div className="relative bg-lightModeText rounded-full text-lightText flex items-center justify-center gap-x-1 px-3 py-1.5">
+          <div className="relative bg-lightModeText rounded-full text-lightText flex items-center justify-center gap-x-1 px-3 py-1.5 text-sm">
             <BsCart className="text-xl text-lightText" />
             {/* <p className="text-sm ps-1">{Number(getCartTotal()).toFixed(2)}</p> */}
             <FormattedPrice amount={getCartTotal()} />

@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="w-full bg-lightModeText text-lightModeSecondary">
-      <Container className="grid grid-col-1 md:grid-col-2 lg:grid-col-3 xl:grid-cols-3 gap-5 ">
+      <Container className="grid grid-col-1 md:grid-col-2 lg:grid-col-3 xl:grid-cols-3 gap-5">
         <div className="flex flex-col gap-y-4 ">
           <Logo />
           <div>
