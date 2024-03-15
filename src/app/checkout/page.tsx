@@ -45,7 +45,7 @@ function Checkout() {
                     alt="product image"
                     width={500}
                     height={500}
-                    className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32"
+                    className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32 shadow-lg"
                   />
                 </div>
                 <div className="p-4 text-center text-pretty text-sm">
@@ -67,11 +67,11 @@ function Checkout() {
                   <BiMinus />
                 </button>
               </div>
-              <div className="w-1/3 flex justify-end items-center">
+              <div className="w-1/3 flex justify-end items-center gap-4">
                 {(Number(item.price) * Number(item.quantity)).toFixed(2)}
                 <button
                   onClick={() => deleteProductFromCart(item.id)}
-                  className="text-lg text-gray-500 px- bg-white hover:shadow-sm  hover:text-red-500">
+                  className="text-lg text-gray-500 px- bg-white hover:shadow-sm  hover:text-red-500 ring-1 p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse hover:ring-red-500 ring-white">
                   <GoTrash />
                 </button>
               </div>
