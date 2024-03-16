@@ -35,21 +35,21 @@ export default function Footer() {
         <div>
           <p className="text-lg">Quick Links</p>
           <ul className="text-base font-medium mt-2 flex flex-col gap-y-2">
-            <Link href={"/"}>
-              <li className="hover:underline underline-offset-4 cursor-pointer">
+            <li className="hover:underline underline-offset-4 cursor-pointer">
+              <Link href={"/"} aria-label="To home page">
                 Home
-              </li>
-            </Link>
-            <Link href={"/cart"}>
-              <li className="hover:underline underline-offset-4 cursor-pointer">
+              </Link>
+            </li>
+            <li className="hover:underline underline-offset-4 cursor-pointer">
+              <Link href={"/cart"} aria-label="To cart page">
                 Cart
-              </li>
-            </Link>
-            <Link href={"/about"}>
-              <li className="hover:underline underline-offset-4 cursor-pointer">
+              </Link>
+            </li>
+            <li className="hover:underline underline-offset-4 cursor-pointer">
+              <Link href={"/about"} aria-label="To about page">
                 About
-              </li>
-            </Link>
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

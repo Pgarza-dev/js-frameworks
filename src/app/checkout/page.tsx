@@ -45,7 +45,7 @@ function Checkout() {
                   <Link href={`/products/${item.id}`}>
                     <Image
                       src={item.image.url}
-                      alt="product image"
+                      alt="Purchased product image"
                       width={500}
                       height={500}
                       className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32 shadow-md drop-shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"

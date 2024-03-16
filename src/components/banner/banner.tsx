@@ -48,7 +48,7 @@ export default function Banner() {
         <div className="w-full h-full relative">
           <Image
             src={bannerOne}
-            alt="bannerOne"
+            alt="Street fashion banner"
             className="w-full h-auto relative image-height mx-auto"
             placeholder="blur"
             width={1280}
@@ -61,7 +61,7 @@ export default function Banner() {
         <div className="w-full h-full relative">
           <Image
             src={bannerTwo}
-            alt="bannerTwo"
+            alt="Spring fashion banner"
             className="w-full h-auto relative image-height"
             width={1280}
             height={1080}
@@ -73,7 +73,7 @@ export default function Banner() {
         <div className="w-full h-full relative">
           <Image
             src={bannerThree}
-            alt="bannerThree"
+            alt="Sleek looks banner"
             className="w-full h-auto relative image-height"
             width={1280}
             height={1080}

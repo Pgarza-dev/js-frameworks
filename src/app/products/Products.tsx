@@ -70,16 +70,16 @@ export default function Products() {
           <Link href={`/products/${product?.id}`}>
             <Image
               src={product.image.url}
-              alt={product.title}
+              alt={`Product image of a specific product ${product?.title}`}
               width={300}
               height={300}
               priority={true}
               className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
             />
-            <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
-              {product?.title}
-            </p>
           </Link>
+          <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
+            {product?.title}
+          </p>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
             <div className="flex flex-row justify-between items-center">
               <div className=" text-sm border-lightModePrimary px-2 py-1">

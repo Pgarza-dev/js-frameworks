@@ -71,11 +71,12 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
       <Container>
         <div
           key={product?.id}
-          className="grid lg:grid-cols-2 gap-5 bg-white rounded-lg p-4 justify-items-center items-center max-w-screen-xl  w-full m-auto">
+          className="grid lg:grid-cols-2 gap-5 bg-white rounded-lg p-4 justify-items-center items-center max-w-screen-xl  w-full m-auto"
+          aria-label="Product details">
           {product?.image?.url && (
             <Image
               src={product.image.url}
-              alt="product image"
+              alt="Your specific product image"
               width={200}
               height={200}
               className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
@@ -91,10 +92,10 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             <div className="text-xs text-lightText hover:text-gray-500 flex flex-col gap-2">
               <span className="text-base text-gray-500">
                 Category:
-                <span className="text-lightModePrimary ps-2 capitalize">
-                  {product?.tags}
-                </span>
+                <span className="text-lightModePrimary ps-2 capitalize"></span>
+                {product?.tags}
               </span>
+
               <span>
                 SKU: <span>{product?.id}</span>
               </span>
@@ -172,7 +173,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
                     <Link href={`/products/${item.id}`}>
                       <Image
                         src={item.image.url}
-                        alt="product image"
+                        alt="Recommended product images"
                         width={200}
                         height={200}
                         className="w-60 h-40 object-cover rounded-lg shadow-md drop-shadow-md hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
