@@ -76,7 +76,8 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             alt="product image"
             width={200}
             height={200}
-            className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-2xl drop-shadow-2xl"
+            className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
+            priority={true}
           />
           <div className="flex flex-col justify-center gap-10">
             <p className="text-4xl font-semibold">{product?.title}</p>
