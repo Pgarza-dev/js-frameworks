@@ -1,5 +1,5 @@
 "use client"; // The Slider is a third-party library that is not compatible with the server-side rendering. So, we need to use the client-side rendering for this component.
-
+import React from "react";
 import Slider from "react-slick";
 import bannerOne from "@/images/bannerOne.jpg";
 import bannerTwo from "@/images/bannerTwo.jpg";

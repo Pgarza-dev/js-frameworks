@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import useProductStore from "@/store/cart";
 import { Product } from "@/app/products/Products";
 import { useEffect } from "react";
@@ -61,9 +62,9 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
   //     </div>
   //   );
   // }
-  const product = products.find(
-    (item: Product) => item.id === params.productsId
-  ) as unknown as Product;
+  const product = products?.find(
+    (item: Product) => item.id === params?.productsId
+  ) as Product;
 
   return (
     <div>
@@ -71,14 +72,16 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
         <div
           key={product?.id}
           className="grid lg:grid-cols-2 gap-5 bg-white rounded-lg p-4 justify-items-center items-center max-w-screen-xl  w-full m-auto">
-          <Image
-            src={product?.image?.url}
-            alt="product image"
-            width={200}
-            height={200}
-            className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
-            priority={true}
-          />
+          {product?.image?.url && (
+            <Image
+              src={product.image.url}
+              alt="product image"
+              width={200}
+              height={200}
+              className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
+              priority={true}
+            />
+          )}
           <div className="flex flex-col justify-center gap-10">
             <p className="text-4xl font-semibold">{product?.title}</p>
             <p className="text-2xl font-semibold">
@@ -138,8 +141,8 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
         </div>
         <div className="bg-white p-4 rounded-lg mt-6 grid grid-cols-1 gap-6 ">
           <h2 className="text-base font-thin">Product Reviews</h2>
-          {product?.reviews?.map((review) => (
-            <div className="border-b-[1px] border-b-textLight pb-4">
+          {product?.reviews?.map((review, index) => (
+            <div key={index} className="border-b-[1px] border-b-textLight pb-4">
               <p className="text-sm font-light">{review?.username}</p>
               <p className="text-sm text-gray-500 flex flex-row gap-2 items-center">
                 {Array.from({ length: review?.rating }, (_, rating) => (
@@ -147,7 +150,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
                     <IoIosStar />
                   </span>
                 ))}
-                <p>{review?.rating}</p>
+                <span>{review?.rating}</span>
               </p>
               <p className="text-sm text-gray-500 ">{review?.description}</p>
             </div>
