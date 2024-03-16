@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="w-full bg-lightModeText text-lightModeSecondary">
-      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-start">
+      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-start text-sm">
         <div className="flex flex-col gap-y-4 ">
           <Logo />
           <div>
@@ -30,30 +30,36 @@ export default function Footer() {
               </span>
             </a>
           </div>
-          <span>&copy; {new Date().getFullYear()} Pablo Garza.</span>
+          <span>&copy; 2024 Pablo Garza.</span>
         </div>
         <div>
-          <p className="text-lg">Quick Links</p>
+          <p className="text-base">Quick Links</p>
           <ul className="text-base font-medium mt-2 flex flex-col gap-y-2">
             <li className="hover:underline underline-offset-4 cursor-pointer">
-              <Link href={"/"} aria-label="To home page">
+              <Link href={"/"} aria-label="To home page" className="text-sm">
                 Home
               </Link>
             </li>
             <li className="hover:underline underline-offset-4 cursor-pointer">
-              <Link href={"/cart"} aria-label="To cart page">
+              <Link
+                href={"/cart"}
+                aria-label="To cart page"
+                className="text-sm">
                 Cart
               </Link>
             </li>
             <li className="hover:underline underline-offset-4 cursor-pointer">
-              <Link href={"/about"} aria-label="To about page">
+              <Link
+                href={"/about"}
+                aria-label="To about page"
+                className="text-sm">
                 About
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <p className="text-lg mb-2">Payment services</p>
+          <p className="text-base mb-2">Payment services</p>
           <Image
             src={payment}
             alt="payment image"
