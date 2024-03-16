@@ -65,7 +65,7 @@ function Checkout() {
                   <BiMinus />
                 </button>
 
-                <span className="px-3">{item.quantity}</span>
+                <span className="px-3 text-sm">{item.quantity}</span>
                 <button
                   onClick={() => addSingleProductToCart(item.id)}
                   className=" px-1 hover:border-[1px] border rounded-full hover:bg-white text-gray-500 hover:text-secondary">

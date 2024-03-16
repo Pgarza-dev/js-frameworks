@@ -164,7 +164,8 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             {products
               ?.filter((item: Product) =>
                 item.tags.some((tag) => product?.tags.includes(tag))
-              ).filter((item: Product) => item.id !== product?.id)
+              )
+              .filter((item: Product) => item.id !== product?.id)
               .map((item: Product) => (
                 <div key={item.id}>
                   {item.image?.url && (
