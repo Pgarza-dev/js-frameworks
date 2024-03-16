@@ -36,19 +36,21 @@ function Checkout() {
           return (
             <div
               key={item.id}
-              className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-2 group hover:bg-lightModeSecondary">
+              className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-2 group hover:bg-lightModeSecondary pb-4">
               <div className="flex flex-row items-center gap-x-2 w-full">
                 <div className="w-1/3">
                   <h2 className="uppercase py-1 text-gray-500 text-nowrap text-sm">
                     {item.title}
                   </h2>
-                  <Image
-                    src={item.image.url}
-                    alt="product image"
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32 shadow-md drop-shadow-md"
-                  />
+                  <Link href={`/products/${item.id}`}>
+                    <Image
+                      src={item.image.url}
+                      alt="product image"
+                      width={500}
+                      height={500}
+                      className="rounded-lg object-cover w-20 h-20 lg:w-32 lg:h-32 shadow-md drop-shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"
+                    />
+                  </Link>
                 </div>
                 <div className="p-4 text-center text-pretty text-sm">
                   <p className="text-gray-500 hidden md:block">
