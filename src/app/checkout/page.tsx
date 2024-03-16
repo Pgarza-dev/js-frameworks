@@ -36,10 +36,12 @@ function Checkout() {
           return (
             <div
               key={item.id}
-              className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-2">
+              className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-2 group hover:bg-lightModeSecondary">
               <div className="flex flex-row items-center gap-x-2 w-full">
                 <div className="w-1/3">
-                  <h2 className="uppercase py-1 text-gray-500">{item.title}</h2>
+                  <h2 className="uppercase py-1 text-gray-500 text-nowrap text-sm">
+                    {item.title}
+                  </h2>
                   <Image
                     src={item.image.url}
                     alt="product image"
@@ -56,22 +58,23 @@ function Checkout() {
               </div>
               <div className="w-1/3 flex justify-center items-center">
                 <button
-                  onClick={() => addSingleProductToCart(item.id)}
-                  className=" px-1 hover:bg-lightText font-extrabold">
-                  <BiPlus />
-                </button>
-                <span className="px-3">{item.quantity}</span>
-                <button
                   onClick={() => deleteSingleProductFromCart(item.id)}
-                  className=" px-1 hover:bg-lightText font-extrabold">
+                  className=" px-1 hover:border-[1px] border rounded-full hover:bg-white text-gray-500 hover:text-secondary">
                   <BiMinus />
                 </button>
+
+                <span className="px-3">{item.quantity}</span>
+                <button
+                  onClick={() => addSingleProductToCart(item.id)}
+                  className=" px-1 hover:border-[1px] border rounded-full hover:bg-white text-gray-500 hover:text-secondary">
+                  <BiPlus />
+                </button>
               </div>
-              <div className="w-1/3 flex justify-end items-center gap-4">
+              <div className="w-1/3 flex justify-end items-center gap-4 text-sm">
                 {(Number(item.price) * Number(item.quantity)).toFixed(2)}
                 <button
                   onClick={() => deleteProductFromCart(item.id)}
-                  className="text-lg text-gray-500 bg-white hover:text-red-500 ring-1 p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse hover:ring-red-500 ring-white">
+                  className="text-lg text-gray-500 bg-white group-hover:bg-lightModeSecondary hover:text-red-700 hover:font-extrabold p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse">
                   <GoTrash />
                 </button>
               </div>
