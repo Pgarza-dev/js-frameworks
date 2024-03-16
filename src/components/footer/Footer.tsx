@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="w-full bg-lightModeText text-lightModeSecondary">
-      <Container className="grid grid-col-1 md:grid-col-2 lg:grid-col-3 xl:grid-cols-3 gap-5">
+      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-start">
         <div className="flex flex-col gap-y-4 ">
           <Logo />
           <div>
@@ -57,7 +57,7 @@ export default function Footer() {
           <Image
             src={payment}
             alt="payment image"
-            className="w-full h-10 object-cover"
+            className="w-full h-10 object-contain"
           />
         </div>
       </Container>
