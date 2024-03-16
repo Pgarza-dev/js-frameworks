@@ -132,7 +132,25 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               </article>
             </div>
           </div>
+
           <Toaster />
+        </div>
+        <div className="bg-white p-4 rounded-lg mt-6 grid grid-cols-1 gap-6 ">
+          <h2 className="text-base font-thin">Product Reviews</h2>
+          {product?.reviews?.map((review) => (
+            <div className="border-b-[1px] border-b-textLight pb-4">
+              <p className="text-sm font-light">{review?.username}</p>
+              <p className="text-sm text-gray-500 flex flex-row gap-2 items-center">
+                {Array.from({ length: review?.rating }, (_, rating) => (
+                  <span key={rating} className="text-yellow-400 text-sm">
+                    <IoIosStar />
+                  </span>
+                ))}
+                <p>{review?.rating}</p>
+              </p>
+              <p className="text-sm text-gray-500 ">{review?.description}</p>
+            </div>
+          ))}
         </div>
       </Container>
     </div>
