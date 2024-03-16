@@ -23,7 +23,7 @@ const config: Config = {
         lightModeBody: "#f0f3f4",
         lightModePrimary: "#bfb1c4",
         lightModeSecondary: "#ebe6e5",
-        lightModeAccent: "#7d9471",
+        lightModeAccent: "#4B5B48",
       },
     },
   },
