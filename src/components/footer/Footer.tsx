@@ -2,7 +2,7 @@ import { BsGithub, BsLinkedin, BsGoogle } from "react-icons/bs";
 import Container from "../container/Container";
 import Logo from "../logo/Logo";
 import Image from "next/image";
-import payment from "@/images/payment.png";
+import payment from "@/app/public/images/payment.png";
 import Link from "next/link";
 
 export default function Footer() {
