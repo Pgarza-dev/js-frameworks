@@ -156,9 +156,11 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             </div>
           ))}
         </div>
-        <div>
-          <h2>Recommended by customers who also purchased this product</h2>
-          <div className="grid grid-cols-1 gap-4 md:grid-col-">
+        <div className="mt-4 bg-white p-4">
+          <div className="pb-4 text-base">
+            <h2>Recommended by customers who also purchased this product</h2>
+          </div>
+          <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-dense rounded-lg justify-items-center">
             {products
               ?.filter((item: Product) =>
                 item.tags.some((tag) => product?.tags.includes(tag))
@@ -166,17 +168,25 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               .map((item: Product) => (
                 <div key={item.id}>
                   {item.image?.url && (
-                    <Image
-                      src={item.image.url}
-                      alt="product image"
-                      width={200}
-                      height={200}
-                      className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
-                    />
+                    <Link href={`/products/${item.id}`}>
+                      <Image
+                        src={item.image.url}
+                        alt="product image"
+                        width={200}
+                        height={200}
+                        className="w-60 h-40 object-cover rounded-lg shadow-md drop-shadow-md hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+                      />
+                    </Link>
                   )}
+                  <div className="py-3 px-2 text-sm">
+                    <p>{item.title}</p>
+                    <p>
+                      <FormattedPrice amount={item.discountedPrice} />
+                    </p>
+                  </div>
                 </div>
               ))}
-          </div>
+          </article>
         </div>
       </Container>
     </div>
