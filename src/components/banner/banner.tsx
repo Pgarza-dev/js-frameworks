@@ -50,6 +50,7 @@ export default function Banner() {
             src={bannerOne}
             alt="bannerOne"
             className="w-full h-auto relative image-height mx-auto"
+            placeholder="blur"
             width={1280}
             height={1080}
             priority={true}

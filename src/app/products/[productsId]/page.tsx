@@ -156,6 +156,28 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             </div>
           ))}
         </div>
+        <div>
+          <h2>Recommended by customers who also purchased this product</h2>
+          <div className="grid grid-cols-1 gap-4 md:grid-col-">
+            {products
+              ?.filter((item: Product) =>
+                item.tags.some((tag) => product?.tags.includes(tag))
+              )
+              .map((item: Product) => (
+                <div key={item.id}>
+                  {item.image?.url && (
+                    <Image
+                      src={item.image.url}
+                      alt="product image"
+                      width={200}
+                      height={200}
+                      className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
+                    />
+                  )}
+                </div>
+              ))}
+          </div>
+        </div>
       </Container>
     </div>
   );
