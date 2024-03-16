@@ -36,7 +36,7 @@ function Checkout() {
           return (
             <div
               key={item.id}
-              className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-2 group hover:bg-lightModeSecondary pb-4">
+              className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-3 group drop-shadow-xl hover:drop-shadow-none  pb-4">
               <div className="flex flex-row items-center gap-x-2 w-full">
                 <div className="w-1/3">
                   <h2 className="uppercase py-1 text-gray-500 text-nowrap text-sm">
@@ -76,7 +76,7 @@ function Checkout() {
                 {(Number(item.price) * Number(item.quantity)).toFixed(2)}
                 <button
                   onClick={() => deleteProductFromCart(item.id)}
-                  className="text-lg text-gray-500 bg-white group-hover:bg-lightModeSecondary hover:text-red-700 hover:font-extrabold p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse">
+                  className="text-lg text-gray-500 duration-300 rounded-full hover:text-red-700 hover:font-extrabold p-1 hover:bg-red-100 hover:bg-opacity-35 hover:animate-pulse">
                   <GoTrash />
                 </button>
               </div>
