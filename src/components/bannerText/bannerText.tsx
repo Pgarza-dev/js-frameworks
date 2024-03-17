@@ -34,16 +34,17 @@ export default function BannerText({ title }: BannerTextProps) {
           transition={{ duration: 0.7 }}
           className="flex gap-x-4 mt-2 z-50 ">
           <a
-            href="#productCard"
+            href="/about"
             className="py-2 z-50 px-6 rounded-full cursor-pointer duration-200 text-gray-500 border-[2px] border-lightModePrimary hover:text-white hover:bg-lightModePrimary"
             aria-label="Find out more">
             Find out more
           </a>
-          <button
+          <a
+            href="#productCard"
             className="py-2 px-6 z-50 rounded-full bg-white cursor-pointer text-lightModeText hover:bg-lightModePrimary hover:text-white duration-200"
             aria-label="Shop now">
             Shop now
-          </button>
+          </a>
         </motion.div>
       </Container>
     </div>
