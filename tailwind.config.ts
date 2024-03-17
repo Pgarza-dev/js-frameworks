@@ -12,6 +12,13 @@ const config: Config = {
       fontFamily: {
         sans: ["Poppins"],
       },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       colors: {
         bodyColor: "#0b0e0f",
         primary: "#493b4e",
