@@ -39,7 +39,7 @@ function Checkout() {
               className="flex flex-col md:flex-row lg:items-center lg:justify-between bg-white p-3 group drop-shadow-xl hover:drop-shadow-none  pb-4">
               <div className="flex flex-row items-center gap-x-2 w-full">
                 <div className="w-1/3">
-                  <h2 className="uppercase py-1 text-gray-500 text-nowrap text-sm">
+                  <h2 className="uppercase py-1 text-gray-500 text-wrap text-sm sm:text-nowrap">
                     {item.title}
                   </h2>
                   <Link href={`/products/${item.id}`}>
@@ -53,12 +53,10 @@ function Checkout() {
                   </Link>
                 </div>
                 <div className="p-4 text-center text-pretty text-sm">
-                  <p className="text-gray-500 hidden md:block">
-                    {item.description}
-                  </p>
+                  <p className="text-gray-500 ">{item.description}</p>
                 </div>
               </div>
-              <div className="w-1/3 flex justify-center items-center">
+              <div className="w-1/3 flex justify-start  items-center pt-4 sm:justify-center md:pt-0 ">
                 <button
                   onClick={() => deleteSingleProductFromCart(item.id)}
                   className=" px-1 hover:border-[1px] border rounded-full hover:bg-white text-gray-500 hover:text-secondary">
@@ -72,7 +70,7 @@ function Checkout() {
                   <BiPlus />
                 </button>
               </div>
-              <div className="w-1/3 flex justify-end items-center gap-4 text-sm">
+              <div className="w-1/3 flex justify-start pt-4 items-center gap-4 text-sm md:justify-center md:pt-0">
                 {(Number(item.price) * Number(item.quantity)).toFixed(2)}
                 <button
                   onClick={() => deleteProductFromCart(item.id)}
