@@ -76,6 +76,7 @@ export default function Products() {
               height={300}
               priority={true}
               className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
+              sizes="(min-width: 320px) 280px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
             />
           </Link>
           <p className="bg-white duration-200 absolute top-2 right-2 font-medium text-sm py-1 px-3 rounded-full group-hover:bg-lightModePrimary group-hover:text-white">
@@ -83,7 +84,7 @@ export default function Products() {
           </p>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
             <div className="flex flex-row justify-between items-center">
-              <div className=" text-sm border-lightModePrimary px-2 py-1">
+              <div className="text-sm border-lightModePrimary px-2 py-1">
                 {Number(
                   calculateDiscountedPrice(
                     product?.price,
