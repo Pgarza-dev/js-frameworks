@@ -45,8 +45,10 @@ export default function SearchBar() {
       {filteredProducts.length > 0 && (
         <div className="absolute border top-10 p-4 bg-white w-full rounded left-1/2 -translate-x-1/2 flex flex-col gap-2">
           {filteredProducts.map((product: { id: string; title: string }) => (
-            <div className="border-b-2 text-gray-500 hover:text-black">
-              <Link href={`/products/${product.id}`} key={product.id}>
+            <div
+              className="border-b-2 text-gray-500 hover:text-black"
+              key={product.id}>
+              <Link href={`/products/${product.id}`}>
                 <p onClick={handleLinkClick}>{product.title}</p>
               </Link>
             </div>
