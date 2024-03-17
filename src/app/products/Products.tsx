@@ -62,12 +62,12 @@ export default function Products() {
   }
 
   return (
-    <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -mt-10 rounded-lg gap-4 justify-items-center">
+    <Container className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 -mt-10 rounded-lg gap-4 justify-items-center">
       {data.data.map((product: Product) => (
         <div
-        id="productCard"
+          id="productCard"
           key={product?.id}
-          className="w-72 group relative overflow-hidden rounded-lg">
+          className="min-w-min group relative overflow-hidden rounded-lg">
           <Link href={`/products/${product?.id}`}>
             <Image
               src={product.image.url}
@@ -99,7 +99,7 @@ export default function Products() {
                   </p>
                 )}
               </div>
-              <div className="flex flex-row item-center gap-3 ">
+              <div className="flex flex-row item-center gap-3 text-xs">
                 {product?.price !== product?.discountedPrice && (
                   <p className="text-sm text-lightModeAccent line-through">
                     <FormattedPrice amount={product?.price} />
@@ -111,15 +111,15 @@ export default function Products() {
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <div className="flex flex-col text-sm gap-2">
+              <p>Reviews ( {product?.reviews.length} )</p>
+              <div className="flex flex-row text-sm gap-2">
                 <p className="text-sm text-gray-500 flex flex-row items-center">
-                  {Array.from({ length: product?.rating }, (_, index) => (
-                    <span key={index} className="text-yellow-400 text-xl">
+                  {Array.from({ length: product?.rating }, (_, stars) => (
+                    <span key={stars} className="text-yellow-400 text-xl">
                       <IoIosStar />
                     </span>
                   ))}
                 </p>
-                <p>Reviews ( {product?.reviews.length} )</p>
               </div>
               {/* <button className="px-2 py-3  text-sm hover:text-darkText ring-1 ring-white hover:ring-lightModePrimary text-lightModePrimary tracking-wide">
                 Add to cart
