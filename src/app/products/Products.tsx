@@ -84,7 +84,7 @@ export default function Products() {
           </p>
           <div className="absolute w-full bottom-0 p-3 flex flex-col gap-y-2 rounded-b-lg border-[1px] border-t-0 bg-white group-hover:border-lightModePrimary">
             <div className="flex flex-row justify-between items-center">
-              <div className="text-sm border-lightModePrimary px-2 py-1">
+              <div className="text-sm border-lightModePrimary px-2 py-1 animate-pulse text-red-700">
                 {Number(
                   calculateDiscountedPrice(
                     product?.price,
@@ -111,7 +111,7 @@ export default function Products() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between text-xs">
               <p>Reviews ( {product?.reviews.length} )</p>
               <div className="flex flex-row text-sm gap-2">
                 <p className="text-sm text-gray-500 flex flex-row items-center">
