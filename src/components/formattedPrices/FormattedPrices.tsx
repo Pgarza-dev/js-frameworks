@@ -7,5 +7,5 @@ export default function FormattedPrice({ amount }: Amount) {
     style: "currency",
     currency: "USD",
   }).format(amount);
-  return <span className="text-sm">{formattedPrice}</span>;
+  return <span>{formattedPrice}</span>;
 }

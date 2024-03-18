@@ -12,6 +12,8 @@ import { GoTrash } from "react-icons/go";
 import PaymentForm from "@/components/paymentForm/PaymentForm";
 import CheckoutButton from "@/components/buttons/CheckoutButton";
 import EmptyCartButton from "@/components/buttons/EmptyCartButton";
+import HomeButton from "@/components/backButton/HomeButton";
+import PreviousProduct from "@/components/previousProduct/PreviousProductButton";
 
 function Checkout() {
   const {
@@ -26,6 +28,11 @@ function Checkout() {
 
   return (
     <Container className="flex flex-col gap-y-2">
+      <div className="flex flex-row gap-2">
+        <HomeButton />
+        <PreviousProduct />
+      </div>
+
       <div className="hidden sm:inline-flex md:inline-flex lg:inline-flex items-center justify-between font-semibold bg-white p-2">
         <p className="w-1/3">Product</p>
         <p className="w-1/3 flex justify-center items-center ">Quantity</p>

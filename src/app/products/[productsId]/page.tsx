@@ -11,6 +11,8 @@ import { IoMdCart } from "react-icons/io";
 import { MdFavoriteBorder } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
 import Container from "@/components/container/Container";
+import HomeButton from "@/components/backButton/HomeButton";
+
 
 export type ProductDetailsProps = {
   params: { [key: string]: string | string[] | undefined };
@@ -69,6 +71,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
   return (
     <div>
       <Container>
+        <HomeButton />
         <div
           key={product?.id}
           className="grid lg:grid-cols-2 gap-5 bg-white rounded-lg p-4 justify-items-center items-center max-w-screen-xl  w-full m-auto"
@@ -83,12 +86,12 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               priority={true}
             />
           )}
-          <div className="flex flex-col justify-center gap-10">
-            <p className="text-4xl font-semibold">{product?.title}</p>
-            <p className="text-2xl font-semibold">
+          <div className="flex flex-col justify-center gap-3">
+            <p className="text-4xl  underline underline-offset-8 pb-2">{product?.title}</p>
+            <p className="text-lg ">
               <FormattedPrice amount={product?.discountedPrice} />
             </p>
-            <p className="text-gray-500 text-lg">{product?.description}</p>
+            <p className="text-gray-500 text-base">{product?.description}</p>
             <div className="text-xs text-lightText hover:text-gray-500 flex flex-col gap-2">
               <span className="text-base text-gray-500">
                 Category:
@@ -125,7 +128,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               Add to wishlist
             </button>
             <div>
-              <article>
+              <article className="text-base flex  gap-4">
                 <span className="text-sm text-gray-500 flex flex-row items-center">
                   {Array.from({ length: product?.rating }, (_, index) => (
                     <span key={index} className="text-yellow-400 text-xl">

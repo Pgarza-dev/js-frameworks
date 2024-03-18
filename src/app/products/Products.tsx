@@ -106,7 +106,7 @@ export default function Products() {
                     <FormattedPrice amount={product?.price} />
                   </p>
                 )}
-                <p className="font-semibold">
+                <p className="text-base font-semibold">
                   <FormattedPrice amount={product?.discountedPrice} />
                 </p>
               </div>
