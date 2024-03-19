@@ -13,7 +13,6 @@ import toast, { Toaster } from "react-hot-toast";
 import Container from "@/components/container/Container";
 import HomeButton from "@/components/backButton/HomeButton";
 
-
 export type ProductDetailsProps = {
   params: { [key: string]: string | string[] | undefined };
 };
@@ -87,7 +86,9 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             />
           )}
           <div className="flex flex-col justify-center gap-3">
-            <p className="text-4xl  underline underline-offset-8 pb-2">{product?.title}</p>
+            <p className="text-4xl  underline underline-offset-8 pb-2">
+              {product?.title}
+            </p>
             <p className="text-lg ">
               <FormattedPrice amount={product?.discountedPrice} />
             </p>
