@@ -69,7 +69,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
 
   return (
     <div>
-      <Container>
+      <Container className="poppins-thin">
         <HomeButton />
         <div
           key={product?.id}
@@ -79,8 +79,8 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
             <Image
               src={product.image.url}
               alt="Your specific product image"
-              width={200}
-              height={200}
+              width={400}
+              height={400}
               className="max-h-[700px] max-w-[800px] w-auto h-auto object-cover rounded-lg shadow-xl drop-shadow-xl"
               priority={true}
             />
@@ -141,11 +141,9 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               </article>
             </div>
           </div>
-
-          <Toaster />
         </div>
         <div className="bg-white p-4 rounded-lg mt-6 grid grid-cols-1 gap-6 ">
-          <h2 className="text-base font-thin">Product Reviews</h2>
+          <h2 className="poppins-thin">Product Reviews</h2>
           {product?.reviews?.map((review, index) => (
             <div key={index} className="border-b-[1px] border-b-textLight pb-4">
               <p className="text-sm font-light">{review?.username}</p>
@@ -157,22 +155,24 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
                 ))}
                 <span>{review?.rating}</span>
               </p>
-              <p className="text-sm text-gray-500 ">{review?.description}</p>
+              <p className="text-sm text-gray-500 poppins-thin-italic ">
+                {review?.description}
+              </p>
             </div>
           ))}
         </div>
         <div className="mt-4 bg-white p-4">
-          <div className="pb-4 text-base">
+          <div className="pb-4 text-base text-lightModeText">
             <h2>Recommended by customers who also purchased this product</h2>
           </div>
-          <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-dense rounded-lg justify-items-center">
+          <article className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-dense rounded-lg justify-items-center">
             {products
               ?.filter((item: Product) =>
                 item.tags.some((tag) => product?.tags.includes(tag))
               )
               .filter((item: Product) => item.id !== product?.id)
               .map((item: Product) => (
-                <div key={item.id}>
+                <div key={item.id} className="group text-gray-500 ">
                   {item.image?.url && (
                     <Link href={`/products/${item.id}`}>
                       <Image
@@ -184,8 +184,8 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
                       />
                     </Link>
                   )}
-                  <div className="py-3 px-2 text-sm">
-                    <p>{item.title}</p>
+                  <div className="py-3 px-2 text-sm group-hover:text-lightModeText">
+                    <p className="">{item.title}</p>
                     <p>
                       <FormattedPrice amount={item.discountedPrice} />
                     </p>
@@ -194,6 +194,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               ))}
           </article>
         </div>
+        <Toaster />
       </Container>
     </div>
   );
