@@ -16,16 +16,31 @@ export default function Header() {
   // console.log({ cart });
 
   return (
-    <header className="bg-lightModeBody h-20 top-0 sticky z-50">
+    <header className="bg-lightModeBody h-20 top-0 sticky z-50 border-b-[1px] border-b-gray-500">
       <Container className="h-full flex flex-row items-center md:gap-x-5 justify-between md:justify-start">
         <Logo />
         {/* Search bar */}
         <SearchBar />
         {/* Login Button */}
-        <div className=" text-lightModeText border-2 hidden bg-white sm:flex items-center justify-center p-1.5 rounded-full hover:border-2 hover:border-lightModePrimary cursor-pointer hover:text-lightModeText/30 duration-200">
-          <RiUserShared2Line className="text-xl text-lightModeText" />
-          <p className="text-sm ps-1">Login/Register</p>
-        </div>
+        <Link href="/login">
+          <span className=" rounded-full cursor-pointer duration-200 text-gray-500 hover:text-darkText">
+            <RiUserShared2Line className="text-xl" />
+            {/* <p className="text-sm ps-1">Login/Register</p> */}
+          </span>
+        </Link>
+
+        {/* about page */}
+        <Link href="/about">
+          <span className="duration-200 text-gray-500 hover:text-darkText text-sm">
+            About
+          </span>
+        </Link>
+        {/* contact page */}
+        <Link href="/contact">
+          <span className="duration-200 text-gray-500 hover:text-darkText text-sm">
+            Contact
+          </span>
+        </Link>
         {/* cart button */}
         <Link href="/checkout">
           <div className="relative bg-lightModeText rounded-full text-lightText flex items-center justify-center gap-x-1 px-3 py-1.5 text-sm">
