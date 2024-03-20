@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div>
       <AboutBanner />
-      <Container className="poppins-thin text-center flex flex-col">
+      <Container className="poppins-thin text-center flex flex-col max-w-[60rem]">
         <div className=" gap-4 flex-col flex md:">
           <div className="flex flex-col poppins-thin text-justify">
             <h2 className="lg:text-3xl md:text-xl font-semibold md:font-normal poppins-thin uppercase py-4 lg:text-pretty text-center">
