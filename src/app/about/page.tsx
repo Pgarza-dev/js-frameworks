@@ -13,7 +13,7 @@ export default function About() {
       <AboutBanner />
       <Container className="poppins-thin text-center flex flex-col">
         <div className=" gap-4 flex-col flex md:">
-          <div className="flex flex-col poppins-extralight text-justify">
+          <div className="flex flex-col poppins-thin text-justify">
             <h2 className="lg:text-3xl md:text-xl font-semibold md:font-normal poppins-thin uppercase py-4 lg:text-pretty text-center">
               Our beliefs
             </h2>
@@ -30,9 +30,11 @@ export default function About() {
                 <span className="after:block after:absolute relative inline-block ps-1 pb-2 text-2xl">
                   <RiDoubleQuotesR className="text-lightModePrimary" />
                 </span>
-                <span className="text-sm poppins-semibold-italic"> - Pablo Garza</span>
+                <span className="text-sm poppins-semibold-italic">
+                  {" "}
+                  - Pablo Garza
+                </span>
               </blockquote>
-              {/* <RiDoubleQuotesR className="text-4xl pb-5" /> */}
             </div>
           </div>
         </div>
@@ -48,7 +50,7 @@ export default function About() {
           priority={true}
         />
         <div className="lg:w-1/2 lg:h-[50rem] flex flex-col justify-center text-justify items-center p-0 md:p-4 gap-0 sm:gap-4">
-          <div className="border-8 p-6 border-green-500 md:border-opacity-55 border-opacity-0">
+          <div className="border-8 p-6 border-green-500 md:border-opacity-55 border-opacity-0 sm:border-opacity-0">
             <div className="flex flex-col poppins-extralight lg:w-96 ">
               <h2 className="lg:text-3xl md:text-xl font-semibold md:font-normal poppins-thin uppercase py-4 lg:text-pretty">
                 Our Mission to save the planet
@@ -71,7 +73,7 @@ export default function About() {
           priority={true}
         />
         <div className="lg:w-1/2 lg:h-[50rem] flex flex-col justify-center text-justify items-center p-0 md:p-4 gap-0 sm:gap-4">
-          <div className="border-8 p-6 border-blue-500 border-opacity-55 md:border-opacity-55 border-opacity-0">
+          <div className="border-8 p-6 border-blue-500 md:border-opacity-55 border-opacity-0">
             <div className="flex flex-col poppins-extralight lg:w-96">
               <h2 className="lg:text-3xl md:text-xl font-semibold md:font-normal poppins-thin uppercase py-4 lg:text-pretty lg:tracking-widest">
                 World Peace and Social Justice
