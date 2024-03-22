@@ -3,7 +3,7 @@ import React from "react";
 import useFetch from "@/hooks/data";
 import Container from "@/components/container/Container";
 import Image from "next/image";
-import calculateDiscountedPrice from "@/utils/index";
+import calculateDiscountedPrice from "@/lib/utils/index";
 import FormattedPrice from "@/components/formattedPrices/FormattedPrices";
 import { IoIosStar } from "react-icons/io";
 import Link from "next/link";
