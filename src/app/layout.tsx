@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import "slick-carousel/slick/slick.css";
-import "./css/globals.css";
+import "@/app/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
