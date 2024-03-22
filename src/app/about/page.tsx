@@ -9,7 +9,7 @@ import { RiDoubleQuotesR } from "react-icons/ri";
 
 export default function About() {
   return (
-    <div>
+    <div className="flex flex-col max-w-7xl mx-auto">
       <AboutBanner />
       <Container className="poppins-thin text-center flex flex-col max-w-[60rem]">
         <div className=" gap-4 flex-col flex md:">
@@ -40,7 +40,7 @@ export default function About() {
         </div>
       </Container>
 
-      <div className="flex flex-row flex-wrap-reverse md:flex-nowrap sm:p-0 bg-lightModePrimary bg-opacity-40">
+      <div className="flex flex-row flex-wrap-reverse md:flex-nowrap sm:p-0 bg-lightModePrimary bg-opacity-40 ">
         <Image
           src={stillLife}
           alt="leaf and flower still life photo"
@@ -63,7 +63,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row-reverse bg-lightModePrimary bg-opacity-40">
+      <div className="flex flex-col-reverse md:flex-row-reverse bg-lightModePrimary bg-opacity-40 ">
         <Image
           src={peacefulWorld}
           alt="leaf and flower still life photo"
