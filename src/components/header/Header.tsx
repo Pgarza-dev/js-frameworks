@@ -1,9 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { RiMenuAddFill } from "react-icons/ri";
-
-import useFetch from "@/hooks/data";
-import { API_PRODUCTS } from "@/shared/apis";
 import Container from "../container/container";
 import Logo from "../logo/Logo";
 import { BsCart } from "react-icons/bs";
@@ -52,7 +49,6 @@ export default function Header() {
         <Link href="/checkout" className="">
           <div className="relative bg-lightModeText rounded-full text-lightText flex items-center justify-center gap-x-1 px-3 py-1.5 text-sm">
             <BsCart className="text-xl text-lightText" />
-            {/* <p className="text-sm ps-1">{Number(getCartTotal()).toFixed(2)}</p> */}
             <FormattedPrice amount={getCartTotal()} />
             <span className="bg-lightModeBody shadow-xl shadow-black text-orange-500 rounded-full text-sm font-semibold absolute -right-2 -top-1 w-5 h-5 flex items-center justify-center">
               {getTotalNumberOfItemsInCart()}
@@ -87,8 +83,9 @@ export default function Header() {
                 Contact
               </span>
             </Link>
-            <Link href="/checkout" className="group p-2 w-min hover:bg-gray-100 rounded-full"><BsCart className="text-xl text-gray-500 group-hover:text-darkText " /></Link>
-
+            <Link href="/checkout" className="group p-2 w-min hover:bg-gray-100 rounded-full">
+              <BsCart className="text-xl text-gray-500 group-hover:text-darkText " />
+            </Link>
           </div>)}
       </Container>
     </header>

@@ -1,8 +1,5 @@
 "use client";
 import useProductStore from "@/store/cart";
-import { ProductDetailsProps } from "../products/[productsId]/page";
-import { useEffect } from "react";
-import { Product } from "@/app/products/Products";
 import Image from "next/image";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
