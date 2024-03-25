@@ -1,7 +1,7 @@
 "use client";
 import useProductStore from "@/store/cart";
-import useShippingTotal from "@/lib/utils/shippingTotal";
-import useGrandTotal from "@/lib/utils/grandTotal";
+import useShippingTotal from "@/lib/hooks/shippingTotal";
+import useGrandTotal from "@/lib/hooks/grandTotal";
 import FormattedPrice from "../formattedPrices/FormattedPrices";
 
 const PaymentForm = () => {

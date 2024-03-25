@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import useFetch from "@/hooks/data";
+import useFetch from "@/lib/hooks/data";
 import Container from "@/components/container/container";
 import Image from "next/image";
 import calculateDiscountedPrice from "@/lib/utils/index";
@@ -91,14 +91,14 @@ export default function Products() {
                     product?.discountedPrice
                   )
                 ) > 0 && (
-                  <p className="text-sm font-bold">
-                    {calculateDiscountedPrice(
-                      product?.price,
-                      product?.discountedPrice
-                    )}
-                    % off
-                  </p>
-                )}
+                    <p className="text-sm font-bold">
+                      {calculateDiscountedPrice(
+                        product?.price,
+                        product?.discountedPrice
+                      )}
+                      % off
+                    </p>
+                  )}
               </div>
               <div className="flex flex-row item-center gap-3 text-xs">
                 {product?.price !== product?.discountedPrice && (

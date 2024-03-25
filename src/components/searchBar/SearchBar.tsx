@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GoSearch } from "react-icons/go";
-import useFetch from "@/hooks/data";
+import useFetch from "@/lib/hooks/data";
 import { API_PRODUCTS } from "@/shared/apis";
 import Link from "next/link";
 
