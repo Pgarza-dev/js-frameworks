@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import useFetch from "@/hooks/data";
-import Container from "@/components/container/Container";
+import Container from "@/components/container/container";
 import Image from "next/image";
 import calculateDiscountedPrice from "@/lib/utils/index";
 import FormattedPrice from "@/components/formattedPrices/FormattedPrices";

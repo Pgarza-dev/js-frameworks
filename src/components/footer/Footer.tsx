@@ -11,29 +11,29 @@ export default function Footer() {
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-start text-sm">
         <div className="flex flex-col gap-y-4 ">
           <Logo />
-          <div>
+          <div className="flex flex-row gap-4 pb-4">
             <a href="https://github.com/Pgarza-dev" target="_blank">
-              <span className="socialIcons">
+              <span className="inline-flex items-center justify-center rounded-md text-lg hover:bg-white p-1 hover:text-lightModeText">
                 <BsGithub />
               </span>
             </a>
             <a
               href="https://www.linkedin.com/in/pablo-garza-4a897762/"
               target="_blank">
-              <span className="socialIcons">
+              <span className="inline-flex items-center justify-center rounded-md text-lg hover:bg-white p-1 hover:text-lightModeText">
                 <BsLinkedin />
               </span>
             </a>
             <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
-              <span className="socialIcons">
+              <span className="inline-flex items-center justify-center rounded-md text-lg hover:bg-white p-1 hover:text-lightModeText">
                 <BsGoogle />
               </span>
             </a>
           </div>
-          <span>&copy; 2024 Pablo Garza.</span>
+          
         </div>
-        <div>
-          <p className="text-base">Quick Links</p>
+        <div className="py-2">
+          <p className="text-lg">Quick Links</p>
           <ul className="text-base font-medium mt-2 flex flex-col gap-y-2">
             <li className="hover:underline underline-offset-4 cursor-pointer">
               <Link href={"/"} aria-label="To home page" className="text-sm">
@@ -66,6 +66,7 @@ export default function Footer() {
             className="w-full h-10 object-contain"
           />
         </div>
+        <span className="pt-4">&copy; 2024 Pablo Garza.</span>
       </Container>
     </div>
   );

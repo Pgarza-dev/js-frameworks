@@ -77,15 +77,6 @@
   }
 }
 
-
-/* @layer components {
-  .socialIcons {
-    @apply inline-flex items-center justify-center rounded-md text-lg hover:bg-white p-1 hover:text-lightModeText;
-  }
-} */
-
-
-
 .image-height {
   height: 40rem;
   width: 100%;
