@@ -1,11 +1,11 @@
 import useProductStore from "@/store/cart";
 import shippingTotal from "./shippingTotal";
 
-const grandTotal = () => {
+const useGrandTotal = () => {
   const { getCartTotal } = useProductStore();
   const grandTotal = getCartTotal() + shippingTotal();
 
   return grandTotal;
 };
 
-export default grandTotal;
+export default useGrandTotal

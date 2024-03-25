@@ -1,7 +1,7 @@
 "use client";
 import useProductStore from "@/store/cart";
-import shippingTotal from "@/lib/utils/shippingTotal";
-import grandTotal from "@/lib/utils/grandTotal";
+import useShippingTotal from "@/lib/utils/shippingTotal";
+import useGrandTotal from "@/lib/utils/grandTotal";
 import FormattedPrice from "../formattedPrices/FormattedPrices";
 
 const PaymentForm = () => {
@@ -21,7 +21,7 @@ const PaymentForm = () => {
         <div className="max-w-lg flex items-center justify-between">
           <p className=" uppercase font-medium">Shipping</p>
           <p>
-            <FormattedPrice amount={shippingTotal()} />
+            <FormattedPrice amount={useShippingTotal()} />
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ const PaymentForm = () => {
         <div className="max-w-lg flex items-center justify-between">
           <p className=" uppercase font-medium">Total</p>
           <p>
-            <FormattedPrice amount={grandTotal()} />
+            <FormattedPrice amount={useGrandTotal()} />
           </p>
         </div>
       </div>

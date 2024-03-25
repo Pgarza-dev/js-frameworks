@@ -79,8 +79,8 @@ export default function About() {
                 World Peace and Social Justice
               </h2>
               <p className="lg:text-base md:text-sm">
-                By choosing UrbanFinds, you're not just getting stylish clothing
-                – you're supporting a company that values human rights, social
+                By choosing UrbanFinds, you are not just getting stylish clothing
+                ,you are supporting a company that values human rights, social
                 justice, and environmental stewardship.
               </p>
             </div>
