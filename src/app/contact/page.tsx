@@ -11,7 +11,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import Container from "@/components/container/Container";
+import Container from "@/components/container/container";
 import {
   Select,
   SelectContent,

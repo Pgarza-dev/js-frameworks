@@ -7,7 +7,7 @@ import Image from "next/image";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import Link from "next/link";
-import Container from "@/components/container/Container";
+import Container from "@/components/container/container";
 import { GoTrash } from "react-icons/go";
 import PaymentForm from "@/components/paymentForm/PaymentForm";
 import CheckoutButton from "@/components/buttons/CheckoutButton";

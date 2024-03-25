@@ -1,5 +1,5 @@
 import AboutBanner from "@/components/aboutBanner/AboutBanner";
-import Container from "@/components/container/Container";
+import Container from "@/components/container/container";
 import Image from "next/image";
 import React from "react";
 import stillLife from "@/app/public/images/stillLife.jpg";
