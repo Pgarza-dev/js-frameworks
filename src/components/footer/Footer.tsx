@@ -1,5 +1,5 @@
 import { BsGithub, BsLinkedin, BsGoogle } from "react-icons/bs";
-import Container from "../container/Container";
+import Container from "../container/container";
 import Logo from "../logo/Logo";
 import Image from "next/image";
 import payment from "@/app/public/images/payment.png";
@@ -30,7 +30,7 @@ export default function Footer() {
               </span>
             </a>
           </div>
-          
+
         </div>
         <div className="py-2">
           <p className="text-lg">Quick Links</p>
