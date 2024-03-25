@@ -42,7 +42,7 @@ export default function Footer() {
             </li>
             <li className="hover:underline underline-offset-4 cursor-pointer">
               <Link
-                href={"/cart"}
+                href={"/checkout"}
                 aria-label="To cart page"
                 className="text-sm">
                 Cart
