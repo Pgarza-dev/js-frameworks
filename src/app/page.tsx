@@ -11,7 +11,7 @@ export default function Home() {
         <Login />
       </SessionProvider> */}
       <main>
-        {/* <Banner /> */}
+      <Banner />
         <Products />
       </main>
     </>

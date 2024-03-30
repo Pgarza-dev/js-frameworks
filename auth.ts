@@ -3,7 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 
 export const {
-  handlers: { GET, POST },
+  handlers: { GET, POST},
   auth,
   signOut,
   signIn,
@@ -18,6 +18,7 @@ export const {
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
+  secret: process.env.SECRET
 });
 
 //  const config: NextAuthConfig = {

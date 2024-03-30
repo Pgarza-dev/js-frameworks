@@ -26,7 +26,6 @@ export default function RootLayout({
         <SessionProvider>
           <Login />
         </SessionProvider>
-        <Banner />
         <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
