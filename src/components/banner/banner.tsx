@@ -15,7 +15,8 @@ export default function Banner() {
     return (
       <div
         onClick={onClick}
-        className="hidden md:block p-2 bg-white hover:font-bold hover:text-lightModePrimary cursor-pointer duration-200 rounded-full text-2xl items-center justify-center z-20 absolute right-1/3 bottom-10">
+        className="hidden md:block p-2 bg-white hover:font-bold hover:text-lightModePrimary cursor-pointer duration-200 rounded-full text-2xl items-center justify-center z-20 absolute right-1/3 bottom-10"
+      >
         <PiCaretRightLight />
       </div>
     );
@@ -25,7 +26,8 @@ export default function Banner() {
     return (
       <div
         onClick={onClick}
-        className="hidden md:block p-2 bg-white hover:text-lightModePrimary hover:font-bold cursor-pointer rounded-full text-2xl items-center justify-center z-20 absolute left-1/3 bottom-10">
+        className="hidden md:block p-2 bg-white hover:text-lightModePrimary hover:font-bold cursor-pointer rounded-full text-2xl items-center justify-center z-20 absolute left-1/3 bottom-10"
+      >
         <PiCaretLeftLight />
       </div>
     );
@@ -54,7 +56,6 @@ export default function Banner() {
             width={1280}
             height={1080}
             priority={true}
-            // sizes="(min-width: 320px) 320px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
           />
           <BannerText title="Street wear" />
         </div>
@@ -66,7 +67,6 @@ export default function Banner() {
             width={1280}
             height={1080}
             priority={true}
-            // sizes="(min-width: 320px) 320px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
           />
           <BannerText title="Spring fashion" />
         </div>
@@ -78,7 +78,6 @@ export default function Banner() {
             width={1280}
             height={1080}
             priority={true}
-            // sizes="(min-width: 320px) 320px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
           />
           <BannerText title="Sleek looks" />
         </div>

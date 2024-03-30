@@ -27,12 +27,6 @@ const Login = async (props: LoginProps) => {
   const session = await auth();
   return (
     <div className="flex flex-row gap-6 items-center justify-end">
-      {/* <Link href="/api/auth/signin" className="">
-          <span className="rounded-full cursor-pointer duration-200 text-gray-500 hover:text-darkText">
-            <RiUserShared2Line className="text-xl" />
-          </span>
-        </Link> */}
-
       <span className="rounded-full cursor-pointer duration-200 text-gray-500 hover:text-darkText">
         {session?.user ? (
           <div className="flex flex-row items-center justify-center">

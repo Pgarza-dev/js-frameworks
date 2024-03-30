@@ -25,13 +25,6 @@ export default function Header() {
         <Logo />
         {/* Search bar */}
         <SearchBar />
-        {/* Login Button */}
-        {/* <Link href="/api/auth/signin" className="hidden md:flex">
-          <span className="rounded-full cursor-pointer duration-200 text-gray-500 hover:text-darkText">
-            <RiUserShared2Line className="text-xl" />
-          </span>
-        </Link> */}
-
         {/* about page */}
         <Link className="hidden md:flex" href="/about">
           <span className="duration-200 text-gray-500 hover:text-darkText text-sm">
@@ -69,14 +62,6 @@ export default function Header() {
         </div>
         {isClicked && (
           <div className="md:hidden p-4 flex flex-row items-center justify-evenly mx-auto gap-y-4 absolute top-20 left-0 w-full bg-lightModeBody bg-opacity-60 backdrop-blur-sm shadow-xl">
-            {/* <Link
-              href="/api/auth/signin"
-              className="group p-2 w-min hover:bg-gray-100 rounded-full"
-            >
-              <span className=" rounded-full cursor-pointer duration-200 text-gray-500 group-hover:text-darkText">
-                <RiUserShared2Line className="text-xl" />
-              </span>
-            </Link> */}
             <Link
               href="/about"
               className="group p-2 w-min hover:bg-gray-100 rounded-full"

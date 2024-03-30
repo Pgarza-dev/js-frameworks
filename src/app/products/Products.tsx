@@ -35,8 +35,6 @@ export interface Product {
 export default function Products() {
   const { data, isLoading, isError } = useFetch(API_PRODUCTS);
 
-  //   console.log(data);
-
   if (isLoading) {
     return (
       <div>
@@ -67,7 +65,8 @@ export default function Products() {
         <div
           id="productCard"
           key={product?.id}
-          className="min-w-min group relative overflow-hidden rounded-lg">
+          className="min-w-min group relative overflow-hidden rounded-lg"
+        >
           <Link href={`/products/${product?.id}`}>
             <Image
               src={product.image.url}
@@ -91,14 +90,14 @@ export default function Products() {
                     product?.discountedPrice
                   )
                 ) > 0 && (
-                    <p className="text-sm font-bold">
-                      {calculateDiscountedPrice(
-                        product?.price,
-                        product?.discountedPrice
-                      )}
-                      % off
-                    </p>
-                  )}
+                  <p className="text-sm font-bold">
+                    {calculateDiscountedPrice(
+                      product?.price,
+                      product?.discountedPrice
+                    )}
+                    % off
+                  </p>
+                )}
               </div>
               <div className="flex flex-row item-center gap-3 text-xs">
                 {product?.price !== product?.discountedPrice && (
@@ -122,9 +121,6 @@ export default function Products() {
                   ))}
                 </p>
               </div>
-              {/* <button className="px-2 py-3  text-sm hover:text-darkText ring-1 ring-white hover:ring-lightModePrimary text-lightModePrimary tracking-wide">
-                Add to cart
-              </button> */}
             </div>
           </div>
         </div>

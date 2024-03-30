@@ -47,7 +47,8 @@ export default function SearchBar() {
           {filteredProducts.map((product: { id: string; title: string }) => (
             <div
               className="border-b-2 text-gray-500 hover:text-black"
-              key={product.id}>
+              key={product.id}
+            >
               <Link href={`/products/${product.id}`}>
                 <p onClick={handleLinkClick}>{product.title}</p>
               </Link>
