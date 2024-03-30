@@ -26,12 +26,11 @@ export default function Header() {
         {/* Search bar */}
         <SearchBar />
         {/* Login Button */}
-        <Link href="/login" className="hidden md:flex">
+        {/* <Link href="/api/auth/signin" className="hidden md:flex">
           <span className="rounded-full cursor-pointer duration-200 text-gray-500 hover:text-darkText">
             <RiUserShared2Line className="text-xl" />
-            {/* <p className="text-sm ps-1">Login/Register</p> */}
           </span>
-        </Link>
+        </Link> */}
 
         {/* about page */}
         <Link className="hidden md:flex" href="/about">
@@ -57,8 +56,10 @@ export default function Header() {
         </Link>
         {/* Mobile menu */}
         <div className="md:hidden items-center justify-center">
-          <button className="inline-flex items-center justify-center p-2 text-lightModeText rounded-full duration-300:"
-            onClick={toggleNavbar}>
+          <button
+            className="inline-flex items-center justify-center p-2 text-lightModeText rounded-full duration-300:"
+            onClick={toggleNavbar}
+          >
             {isClicked ? (
               <RiMenuAddFill className="text-xl rotate-90 duration-300" />
             ) : (
@@ -68,25 +69,38 @@ export default function Header() {
         </div>
         {isClicked && (
           <div className="md:hidden p-4 flex flex-row items-center justify-evenly mx-auto gap-y-4 absolute top-20 left-0 w-full bg-lightModeBody bg-opacity-60 backdrop-blur-sm shadow-xl">
-            <Link href="/login" className="group p-2 w-min hover:bg-gray-100 rounded-full">
+            {/* <Link
+              href="/api/auth/signin"
+              className="group p-2 w-min hover:bg-gray-100 rounded-full"
+            >
               <span className=" rounded-full cursor-pointer duration-200 text-gray-500 group-hover:text-darkText">
                 <RiUserShared2Line className="text-xl" />
               </span>
-            </Link>
-            <Link href="/about" className="group p-2 w-min hover:bg-gray-100 rounded-full">
+            </Link> */}
+            <Link
+              href="/about"
+              className="group p-2 w-min hover:bg-gray-100 rounded-full"
+            >
               <span className="group-hover:text-darkText duration-200 text-gray-500 hover:text-darkText text-sm">
                 About
               </span>
             </Link>
-            <Link href="/contact" className="group p-2 w-min hover:bg-gray-100 rounded-full">
+            <Link
+              href="/contact"
+              className="group p-2 w-min hover:bg-gray-100 rounded-full"
+            >
               <span className="group-hover:text-darkText duration-200 text-gray-500 text-sm">
                 Contact
               </span>
             </Link>
-            <Link href="/checkout" className="group p-2 w-min hover:bg-gray-100 rounded-full">
+            <Link
+              href="/checkout"
+              className="group p-2 w-min hover:bg-gray-100 rounded-full"
+            >
               <BsCart className="text-xl text-gray-500 group-hover:text-darkText " />
             </Link>
-          </div>)}
+          </div>
+        )}
       </Container>
     </header>
   );
