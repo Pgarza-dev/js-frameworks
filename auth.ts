@@ -20,15 +20,3 @@ export const {
   ],
   secret: process.env.SECRET
 });
-
-//  const config: NextAuthConfig = {
-//      providers: [
-//           Google({
-//           clientId: process.env.GOOGLE_CLIENT_ID,
-//           clientSecret: process.env.GOOGLE_CLIENT_SECRET
-//           })
-//      ],
-//      secret: process.env.SECRET,
-//      }
-
-//  export const { handlers, auth, signIn, signOut  } = NextAuth(config)
