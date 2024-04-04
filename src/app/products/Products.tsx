@@ -38,7 +38,7 @@ export default function Products() {
   if (isLoading) {
     return (
       <div>
-        <p>Loading...</p>
+        <span className="loader"></span>
       </div>
     );
   }
@@ -54,7 +54,7 @@ export default function Products() {
   if (!data || data.data.length === 0) {
     return (
       <div>
-        <p>Fetching products...</p>
+        <span className="loader"></span>
       </div>
     );
   }
@@ -65,8 +65,7 @@ export default function Products() {
         <div
           id="productCard"
           key={product?.id}
-          className="min-w-min group relative overflow-hidden rounded-lg"
-        >
+          className="min-w-min group relative overflow-hidden rounded-lg">
           <Link href={`/products/${product?.id}`}>
             <Image
               src={product.image.url}

@@ -4,7 +4,6 @@ import Footer from "@/components/footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "@/app/styles/globals.css";
 import Login from "@/components/sessionProvider/Login";
-import Banner from "@/components/banner/banner";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
