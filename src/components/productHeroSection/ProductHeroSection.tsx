@@ -31,14 +31,17 @@ function ProductHeroSection() {
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}>
-                  <Link href={`/products/${product.id}`}>
+                  <Link
+                    href={`/products/${product.id}`}
+                    as={`/products/${product.id}`}
+                    prefetch={true}>
                     <Image
                       src={product.image.url}
                       alt={product.image.alt}
                       width={500}
                       height={500}
                       className="rounded-xl w-auto h-auto hover:scale-105 transition-transform duration-500 ease-in-out"
-                      sizes=""
+                      sizes="(min-width: 320px) 280px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
                     />
                   </Link>
                 </motion.span>
@@ -57,13 +60,17 @@ function ProductHeroSection() {
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}>
-                  <Link href={`/products/${product.id}`}>
+                  <Link
+                    href={`/products/${product.id}`}
+                    as={`/products/${product.id}`}
+                    prefetch={true}>
                     <Image
                       src={product.image.url}
                       alt={product.image.alt}
                       width={300}
                       height={300}
                       className="rounded-xl w-auto h-auto hover:scale-105 transition-transform duration-500 ease-in-out"
+                      sizes="(min-width: 320px) 280px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
                     />
                   </Link>
                 </motion.span>

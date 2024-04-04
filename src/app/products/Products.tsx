@@ -71,7 +71,7 @@ export default function Products() {
               src={product.image.url}
               alt={`Product image of a specific product ${product?.title}`}
               width={300}
-              height={300}
+              height={300} 
               priority={true}
               className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
               sizes="(min-width: 320px) 280px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
