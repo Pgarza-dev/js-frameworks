@@ -67,7 +67,7 @@ export default function SearchBar() {
                       alt={product.title}
                       width={40}
                       height={40}
-                      className="w-auto h-auto"
+                      className="w-auto h-auto p-4 rounded-full hover:scale-105 transition-transform duration-500 ease-in-out items-start justify-start"
                     />
                     <p className="ml-2">{product.title}</p>
                   </div>
