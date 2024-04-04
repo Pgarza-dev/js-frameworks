@@ -37,7 +37,7 @@ function ProductHeroSection() {
                       alt={product.image.alt}
                       width={500}
                       height={500}
-                      className="rounded-xl w-auto h-auto"
+                      className="rounded-xl w-auto h-auto hover:scale-105 transition-transform duration-500 ease-in-out"
                       sizes=""
                     />
                   </Link>
@@ -63,7 +63,7 @@ function ProductHeroSection() {
                       alt={product.image.alt}
                       width={300}
                       height={300}
-                      className="rounded-xl w-auto h-auto"
+                      className="rounded-xl w-auto h-auto hover:scale-105 transition-transform duration-500 ease-in-out"
                     />
                   </Link>
                 </motion.span>
