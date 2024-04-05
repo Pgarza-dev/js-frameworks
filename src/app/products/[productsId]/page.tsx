@@ -10,7 +10,7 @@ import { IoIosStar } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
 import { MdFavoriteBorder } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
-import Container from "@/components/container/container";
+import Container from "@/components/container/Container";
 import HomeButton from "@/components/backButton/HomeButton";
 
 export type ProductDetailsProps = {

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { RiMenuAddFill } from "react-icons/ri";
-import Container from "../container/Container";
+import Container from "../container/container";
 import Logo from "../logo/Logo";
 import { BsCart } from "react-icons/bs";
 import useProductStore from "@/store/cart";
