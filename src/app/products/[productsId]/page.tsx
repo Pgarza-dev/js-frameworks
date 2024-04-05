@@ -19,7 +19,6 @@ export type ProductDetailsProps = {
 
 export default function ProductDetails({ params }: ProductDetailsProps) {
   const { products, cart, fetchProducts, addToCart } = useProductStore();
-  // console.log({ addToCart });
 
   useEffect(() => {
     fetchProducts();
@@ -40,29 +39,6 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
     }
   }
 
-  // if (isLoading) {
-  //   return (
-  //     <div>
-  //       <p>Loading...</p>
-  //     </div>
-  //   );
-  // }
-
-  // if (isError) {
-  //   return (
-  //     <div>
-  //       <p>Ops something is wrong!</p>
-  //     </div>
-  //   );
-  // }
-
-  // if (!data || data.data.length === 0) {
-  //   return (
-  //     <div>
-  //       <p>No products available.</p>
-  //     </div>
-  //   );
-  // }
   const product = products?.find(
     (item: Product) => item.id === params?.productsId
   ) as Product;
