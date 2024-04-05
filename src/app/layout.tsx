@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     template: "UrbanFinds",
     default: "UrbanFinds - Pablo Garza",
   },
+  description: "UrbanFinds is an e-commerce site for fashion and accessories",
 };
 
 export default function RootLayout({
