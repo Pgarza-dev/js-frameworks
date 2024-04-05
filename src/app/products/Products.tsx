@@ -65,7 +65,7 @@ export default function Products() {
         <div
           id="productCard"
           key={product?.id}
-          className="min-w-min group relative overflow-hidden rounded-lg">
+          className="min-w-full h-full group relative overflow-hidden rounded-lg">
           <Link href={`/products/${product?.id}`}>
             <Image
               src={product.image.url}
@@ -73,7 +73,7 @@ export default function Products() {
               width={300}
               height={300}
               priority={true}
-              className="cursor-pointer w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
+              className="cursor-pointer w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out rounded-t-lg"
               sizes="(min-width: 320px) 280px, (min-width: 640px) 640px, (min-width: 1024px) 1024px, (min-width: 1280px) 1280px, (min-width: 1536px) 1536px, 100vw"
             />
           </Link>
