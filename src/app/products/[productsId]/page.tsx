@@ -124,10 +124,10 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               </div>
             </div>
 
-            <button className="flex items-center justify-center gap-2 text-sm group hover:text-darkText duration-300 cursor-pointer border hover:border-black w-40 py-4 shadow-sm hover:shadow-lg">
+            {/* <button className="flex items-center justify-center gap-2 text-sm group hover:text-darkText duration-300 cursor-pointer border hover:border-black w-40 py-4 shadow-sm hover:shadow-lg">
               <MdFavoriteBorder className="text-xl group-hover:text-red-600" />
               Add to wishlist
-            </button>
+            </button> */}
             <div>
               <article className="text-base flex  gap-4">
                 <span className="text-sm text-gray-500 flex flex-row items-center">
