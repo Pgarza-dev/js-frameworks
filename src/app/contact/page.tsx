@@ -23,11 +23,10 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import toast, { Toaster } from "react-hot-toast";
 
-
 const formSchema = z
   .object({
-    name: z.string().min(2, {
-      message: "Username must be at least 2 characters.",
+    name: z.string().min(3, {
+      message: "Username must be at least 3 characters.",
     }),
     email: z.string().email({
       message: "Please enter a valid email address.",
