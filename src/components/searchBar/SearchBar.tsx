@@ -45,12 +45,12 @@ export default function SearchBar() {
           autoComplete="on"
           type="search"
           placeholder="Search for products"
-          className="| text-lightModeText placeholder:text-sm placeholder:text-gray-400 flex-1 outline-none bg-white focus:placeholder:text-darkText focus:bg-white
+          className="text-lightModeText placeholder:text-sm placeholder:text-gray-400 flex-1 outline-none bg-white focus:placeholder:text-darkText focus:bg-white
                 "
         />
       </div>
       {filteredProducts.length > 0 && (
-        <div className="absolute border top-10 p-4 bg-white w-full rounded left-1/2 -translate-x-1/2 flex flex-col gap-2">
+        <div className="absolute border top-10 p-4 bg-white w-full rounded left-1/2 -translate-x-1/2 flex flex-col gap-2 overflow-y-scroll max-h-96">
           {filteredProducts.map(
             (product: {
               id: string;
