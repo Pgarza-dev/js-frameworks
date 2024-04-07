@@ -34,7 +34,7 @@ export default function SearchBar() {
   };
 
   return (
-    <form className="relative group w-full border-2 hidden md:flex items-center gap-x-1 bg-white rounded-full px-4 py-1.5 focus-within:border-lightModePrimary">
+    <form className="relative group w-full border-2 flex items-center gap-x-1 bg-white rounded-full px-4 py-1.5 focus-within:border-lightModePrimary">
       <div className="flex flex-row w-full">
         <button type="submit" className="relative">
           <GoSearch className="text-lightModeText group-focus-within:text-darkText duration-200 " />

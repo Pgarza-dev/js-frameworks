@@ -22,7 +22,9 @@ export default function Header() {
       <Container className="h-full flex flex-row items-center md:gap-x-5 justify-between md:justify-start">
         <Logo />
         {/* Search bar */}
-        <SearchBar />
+        <div className="hidden md:flex w-full">
+          <SearchBar />
+        </div>
         {/* about page */}
         <Link className="hidden md:flex" href="/about">
           <span className="duration-200 text-gray-500 hover:text-darkText text-sm">
@@ -58,8 +60,11 @@ export default function Header() {
           </button>
         </div>
         {isClicked && (
-          <div className="md:hidden p-4 flex flex-row items-center justify-evenly mx-auto gap-y-4 absolute top-20 left-0 w-full bg-lightModeBody bg-opacity-60 backdrop-blur-sm shadow-xl">
-            <Link
+          <div className="md:hidden p-4 flex flex-col items-center justify-evenly mx-auto gap-y-4 absolute top-20 left-0 w-full bg-lightModeBody bg-opacity-60 backdrop-blur-sm shadow-xl">
+            {/* Search bar */}
+            <SearchBar />
+            <div className="flex flex-row justify-evenly items-center w-full">
+                <Link
               href="/about"
               className="group p-2 w-min hover:bg-gray-100 rounded-full">
               <span className="group-hover:text-darkText duration-200 text-gray-500 hover:text-darkText text-sm">
@@ -73,11 +78,8 @@ export default function Header() {
                 Contact
               </span>
             </Link>
-            <Link
-              href="/checkout"
-              className="group p-2 w-min hover:bg-gray-100 rounded-full">
-              <BsCart className="text-xl text-gray-500 group-hover:text-darkText " />
-            </Link>
+            </div>
+          
           </div>
         )}
       </Container>

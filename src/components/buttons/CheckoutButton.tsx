@@ -13,7 +13,7 @@ export default function CheckoutButton() {
     <>
       {getTotalNumberOfItemsInCart() === 0 && (
         <Button
-        variant="destructive"
+          variant="default"
           className=" mt-4 py-3 px-6 duration-300 uppercase"
           disabled>
           Cart Is Empty
