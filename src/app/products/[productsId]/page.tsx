@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoIosStar } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
-import { MdFavoriteBorder } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
 import Container from "@/components/container/container";
 import HomeButton from "@/components/backButton/HomeButton";
@@ -84,16 +83,16 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
               <div className="flex items-center cursor-pointer group">
                 <button
                   onClick={handleAddToCart}
-                  className="text-lightText text-sm px-20 py-3 bg-lightModeText border-r-[1px] uppercase ">
+                  className="text-lightText text-sm px-20 py-3 rounded-l-md bg-lightModeText border-r-[1px] uppercase ">
                   Add to cart
                 </button>
-                <span className="bg-darkText text-xl hidden sm:flex text-lightText p-3 w-12 items-center justify-center group-hover:ring-1 duration-300 group-hover:ring-black group-hover:bg-slate-50 group-hover:text-darkText">
+                <span className="bg-darkText rounded-r-md text-xl hidden sm:flex text-lightText p-3 w-12 items-center justify-center group-hover:ring-1 duration-300 group-hover:ring-black group-hover:bg-slate-50 group-hover:text-darkText">
                   <IoMdCart />
                 </span>
               </div>
               <div>
                 <Link href={`/checkout`}>
-                  <button className="text-sm text-darkText px-20 py-3 uppercase w-64 hover:text-darkText duration-300 cursor-pointer border  hover:border-black shadow-sm hover:shadow-lg">
+                  <button className="text-sm rounded-md text-darkText px-20 py-3 uppercase w-64 hover:text-darkText duration-300 cursor-pointer border  hover:border-black shadow-sm hover:shadow-lg">
                     Buy now
                   </button>
                 </Link>
